@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Sachin Bhatnagar <mailme@sachinbhatnagar.com> (http://sachinbhatnagar.com)",
+  "author": "Rome D",
   "license": "ISC",
   "dependencies": {
     "node-wit": "4.0.0",

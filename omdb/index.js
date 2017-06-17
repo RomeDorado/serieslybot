@@ -9,7 +9,7 @@ const getInfo = data => {
     if(tvshow) {
       // Fetch data from OMDB
       request({
-        uri: "http://www.omdbapi.com",
+        uri: "https://www.omdbapi.com",
         qs: {
           t: tvshow,
           plot: 'short',

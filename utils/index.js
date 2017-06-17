@@ -14,16 +14,14 @@ const createResponse = (intent, tvshow) => {
       case 'tvInfo':{
         let str = `${title} (${Year}). This was directed by ${Director} and starred ${Actors}. ${Plot}`.subString(0,320);
         return{
-          text: str,
-          image: Poster
+          text: str
         }
       }
     }
   }
   else{
     return{
-      text: "I don't seem to understand.",
-      image: null
+      text: "I don't seem to understand."
     }
   }
 }

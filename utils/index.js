@@ -8,7 +8,7 @@ const createResponse = (intent, tvshow) => {
       Director,
       Actors,
       Poster
-    } = movie;
+    } = tvshow;
 
     switch(intent) {
       case 'tvInfo' : {

@@ -1,7 +1,6 @@
 'use strict';
-const omdb = require('../omdb');
 const createResponse = (intent, tvshow) => {
-  if(tvshow.Response === "True"){
+  if(tvshow.Response === 'True'){
     let{
       Title,
       Year,

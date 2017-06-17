@@ -47,6 +47,7 @@ server.post('/', (req, res, next) => {
 			//WIT Message API
 			wit.message(message.text, {})
 				.then(omdb)
+				.then(response => console.log("The TV Show you searched for: " + tvshow))
 				.then(response => {
 					f.txt(sender, response.text);
 					if(response.image) {

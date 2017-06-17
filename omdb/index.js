@@ -15,7 +15,7 @@ const getInfo = data => {
         uri: "http://www.omdbapi.com",
         qs: {
           t: tvshow,
-          plot: "short",
+          plot: "full",
           y: releaseYear,
           r: 'json',
           apiKey: config.OMDB_API_KEY

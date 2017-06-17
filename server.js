@@ -49,9 +49,6 @@ server.post('/', (req, res, next) => {
 				.then(omdb)
 				.then(response => {
 					f.txt(sender, response.text);
-					if(response.image) {
-						f.img(sender, response.image);
-					}
 				})
 				.catch(error => console.log(error));
 		}

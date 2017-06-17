@@ -1,6 +1,6 @@
 'use strict';
 const createResponse = (intent, tvshow) => {
-  if(movie.Response === "True"){
+  if(tvshow.Response === "True"){
     let{
       Title,
       Year,

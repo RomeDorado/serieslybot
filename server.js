@@ -46,6 +46,7 @@ server.post('/', (req, res, next) => {
 
 			//WIT Message API
 			wit.message(message.text, {})
+				.then(response => console.log(response.entities))
 				.then(omdb)
 				.then(response => {
 					f.txt(sender, response.text);
@@ -53,7 +54,6 @@ server.post('/', (req, res, next) => {
 						f.img(sender, response.image);
 					}
 				})
-				.then(response => console.log(response))
 				.catch(error => console.log(error));
 		}
 

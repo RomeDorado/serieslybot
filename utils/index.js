@@ -59,4 +59,7 @@ let str = `Hello!`;
 
 }
 
-module.exports = createResponse;
+module.exports = {
+createResponse,
+getstarted
+} 

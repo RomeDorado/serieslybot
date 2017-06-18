@@ -27,13 +27,13 @@ const createResponse = (intent, tvshow) => {
       //   }
       // }
       //
-      // case 'director' : {
-      //   let str = `${Title} (${Year}) was directed by ${Director}.`;
-      //   return {
-      //     text: str,
-      //     image: null
-      //   }
-      // }
+      case 'director' : {
+        let str = `${Title} (${Year}) was directed by ${Director}.`;
+        return {
+          text: str,
+          image: null
+        }
+      }
       //
       // default: {
       //   return {

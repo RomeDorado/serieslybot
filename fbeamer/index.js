@@ -97,6 +97,9 @@ class FBeamer {
 		}
 		res.send(200);
 	}
+	
+
+	
 
 	// Show Persistent Menu
 	showPersistent(payload) {

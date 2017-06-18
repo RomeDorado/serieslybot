@@ -23,7 +23,7 @@ const wit = new Wit({
 
 //OMDB
 const omdb = require('./omdb');
-const createResponse = require('./utils');
+const createResponse = require('./utils')
 
 // Register the webhooks
 server.get('/', (req, res, next) => {
@@ -56,29 +56,18 @@ server.post('/', (req, res, next) => {
 				.catch(error => console.log(error));
 		}
 
-		console.log("this is " + postback.payload);
-
-	});
+		});
 });
-
 
 
 // Persistent Menu
 f.showPersistent([
 	{
 		type: "postback",
-		title: "My Watchlist",
-		payload: "menu:Show my watchlist"
-	},
-	{
-		type: "postback",
-		title: "Watch later",
+		title: "My Reminders",
 		payload: "menu:Show my reminders"
 	}
 ]);
-
-
-
 
 // Subscribe
 f.subscribe();

@@ -56,7 +56,7 @@ server.post('/', (req, res, next) => {
 				.catch(error => console.log(error));
 		}
 
-		console.log(postback.text);
+		console.log("this is " + postback.payload);
 
 	});
 

@@ -40,16 +40,12 @@ server.post('/', (req, res, next) => {
 			message
 		} = msg;
 
-		if((message.text) || (postback && postback.payload == "Hello")) {
-
-			console.log(postback.payload + "eto yung postback");
+		if(message.text) {
 			// Process the message here
 			// f.txt(sender, `You said: ${message.text}`);
 
 			//WIT Message API
-			let messageTxt = postback ? postback.payload[0] : message.text;
-			console.log(messageTxt + "this is the message");
-			wit.message(messageTxt, {})
+			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
 					f.txt(sender, response.text);

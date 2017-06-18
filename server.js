@@ -61,6 +61,15 @@ server.post('/', (req, res, next) => {
 	return next();
 });
 
+// Persistent Menu
+f.showPersistent([
+	{
+		type: "postback",
+		title: "My Reminders",
+		payload: "menu:Show my reminders"
+	}
+]);
+
 // Subscribe
 f.subscribe();
 

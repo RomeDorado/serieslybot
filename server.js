@@ -40,7 +40,7 @@ server.post('/', (req, res, next) => {
 			message
 		} = msg;
 
-		if((message.text) || (postback && postback.payload.equals("Hello"))) {
+		if((message.text) || (postback && postback.payload == "Hello")) {
 
 			console.log(postback.payload + "eto yung postback");
 			// Process the message here
@@ -48,6 +48,7 @@ server.post('/', (req, res, next) => {
 
 			//WIT Message API
 			let messageTxt = postback ? postback.payload[0] : message.text;
+			console.log(messageTxt + "this is the message");
 			wit.message(messageTxt, {})
 				.then(omdb)
 				.then(response => {

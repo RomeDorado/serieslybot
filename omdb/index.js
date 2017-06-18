@@ -30,7 +30,7 @@ const getInfo = data => {
     } else if (gs){
 
     var msg = "Hello!";
-    getstarted(intent, msg);
+    resolve(getstarted(intent, msg));
 
       } else {
       reject("Entities not found!");

@@ -65,7 +65,12 @@ server.post('/', (req, res, next) => {
 f.showPersistent([
 	{
 		type: "postback",
-		title: "My Reminders",
+		title: "My Watchlist",
+		payload: "menu:Show my watchlist"
+	},
+	{
+		type: "postback",
+		title: "Watch later",
 		payload: "menu:Show my reminders"
 	}
 ]);

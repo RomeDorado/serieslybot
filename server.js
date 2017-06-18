@@ -47,13 +47,13 @@ server.post('/', (req, res, next) => {
 			//WIT Message API
 			wit.message(message.text, {})
 				.then(omdb)
-				.then(response => console.log(response.entities))
 				.then(response => {
 					f.txt(sender, response.text);
 					if(response.image) {
 						f.img(sender, response.image);
 					}
 				})
+				.then(response => console.log(response.entities))
 				.catch(error => console.log(error));
 		}
 

@@ -41,6 +41,8 @@ server.post('/', (req, res, next) => {
 		} = msg;
 
 		if((message.text) || (postback && postback.payload.equals("Hello"))) {
+
+			console.log(postback.payload + "eto yung postback");
 			// Process the message here
 			// f.txt(sender, `You said: ${message.text}`);
 

@@ -49,17 +49,4 @@ const createResponse = (intent, tvshow) => {
     }
   }
 }
-
-const getstarted = (intent, message) => {
-let str = `Hello!`;
-        return {
-          text: str,
-          image: null
-        }
-
-}
-
-module.exports = {
-createResponse,
-getstarted
-} 
+module.exports = createResponse;

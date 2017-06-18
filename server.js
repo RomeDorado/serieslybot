@@ -53,7 +53,7 @@ server.post('/', (req, res, next) => {
 						f.img(sender, response.image);
 					}
 				})
-				.then(response => console.log(response.entities))
+				.then(response => console.log(response))
 				.catch(error => console.log(error));
 		}
 

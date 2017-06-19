@@ -55,6 +55,7 @@ server.post('/', (req, res, next) => {
 					}
 				})
 				.catch(error => console.log(error));
+				console.log(messageTxt + "this is message text");
 		}
 	});
 	return next();

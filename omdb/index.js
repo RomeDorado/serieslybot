@@ -5,6 +5,7 @@ const config = require('../config');
 const getInfo = data => {
   let intent = data.entities.intent && data.entities.intent[0].value || 'tvInfo';
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
+  let person = data.entities.person && data.entities.person[0].value || null;
   return new Promise((resolve, reject) => {
     if(tvshow) {
       // Fetch data from OMDB
@@ -25,7 +26,24 @@ const getInfo = data => {
           reject(error);
         }
       });
-
+    }
+    if(person){
+      //Fetch data from TMDB
+      request({
+        uri: "https://api.themoviedb.org/3/search/person",
+        qs: {
+          query: person,
+          api_key : config.TMDB_API_KEY
+        },
+        method: 'GET'
+      }, (error, response, body) => {
+        console.log(JSON.parse(body));
+        if(!error && response.statusCode === 200){
+          resolve(createResponse(intent, JSON.parse(body)));
+        } else{
+          reject(error);
+        }
+      });
     }
     else {
       reject("Entities not found!");

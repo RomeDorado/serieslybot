@@ -18,7 +18,7 @@ const getInfo = data => {
         },
         method: 'GET'
       }, (error, response, body) => {
-        console.log(response.entities);
+        console.log(JSON.parse(body));
         if(!error && response.statusCode === 200) {
           resolve(createResponse(intent, JSON.parse(body)));
         } else {

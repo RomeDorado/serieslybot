@@ -29,7 +29,6 @@ const getInfo = data => {
       });
     }
     else if(person != null){
-      console.log("lols");
       //Fetch data from TMDB
       request({
         uri: "https://api.themoviedb.org/3/search/person?api_key=92b2df3080b91d92b31eacb015fc5497",
@@ -38,9 +37,9 @@ const getInfo = data => {
         },
         method: 'GET'
       }, (error, response, body) => {
-        console.log(JSON.parse(results));
+        console.log(JSON.parse(body));
         if(!error && response.statusCode === 200){
-          resolve(createResponse(intent, JSON.parse(results)));
+          resolve(createResponse(intent, JSON.parse(body)));
         } else{
           reject(error);
         }

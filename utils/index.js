@@ -76,7 +76,7 @@ const createResponse = (intent, tvshow) => {
 }
 
 const createResponsePerson = (intent, person) => {
-  if(person.Response === 'True'){
+  if(person){
     console.log("Person mo ito");
     let results = [{      
       name,

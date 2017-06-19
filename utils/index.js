@@ -1,5 +1,10 @@
 'use strict';
+<<<<<<< HEAD
 const createResponse = (intent, tvshow, person) => {
+=======
+const createResponse = (intent, tvshow) => {
+  console.log(intent + " " + tvshow + " " + person);
+>>>>>>> 0e9e92b800a6e0739f8fc24bd17aea978b9c252a
   if(tvshow.Response === 'True') {
     let {
       Title,
@@ -72,12 +77,15 @@ const createResponse = (intent, tvshow, person) => {
       // }
     }
   }
-  else if(person.Response === 'True'){
+}
+
+const createResponsePerson = (intent, person) => {
+  if(person.Response === 'True'){
     console.log("Person mo ito");
-    let{
+    let results = [{      
       name,
       profile_path
-    } = person;
+    }] = person;
 
     switch(intent){
 
@@ -99,4 +107,6 @@ const createResponse = (intent, tvshow, person) => {
   }
   console.log(intent + " " + tvshow + " " + person);
 }
+
 module.exports = createResponse;
+module.exports = createResponsePerson;

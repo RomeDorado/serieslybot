@@ -24,6 +24,7 @@ const wit = new Wit({
 //OMDB
 const omdb = require('./omdb');
 const createResponse = require('./utils')
+const createResponsePerson = require('./utils')
 
 // Register the webhooks
 server.get('/', (req, res, next) => {
@@ -48,6 +49,7 @@ server.post('/', (req, res, next) => {
 			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
+					//console.log("thisis the response" + response);
 					f.txt(sender, response.text);
 					if(response.image) {
 						f.img(sender, response.image);
@@ -55,8 +57,10 @@ server.post('/', (req, res, next) => {
 				})
 				.catch(error => console.log(error));
 		}
+		console.log(postback + "This is postback");
 		})
 });
+
 
 // Persistent Menu
 f.showPersistent([

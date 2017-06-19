@@ -73,7 +73,10 @@ const createResponse = (intent, tvshow, person) => {
       // }
     }
   }
-  else if(person.Response === 'True'){
+}
+
+const createResponsePerson = (intent, person) => {
+  if(person.Response === 'True'){
     console.log("Person mo ito");
     let results = [{      
       name,
@@ -101,3 +104,4 @@ const createResponse = (intent, tvshow, person) => {
 }
 
 module.exports = createResponse;
+module.exports = createResponsePerson;

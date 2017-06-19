@@ -1,6 +1,7 @@
 'use strict';
 const createResponse = (intent, tvshow, person) => {
   if(tvshow.Response === 'True') {
+    console.log("TV Show mo ito");
     let {
       Title,
       Type,

@@ -1,5 +1,6 @@
 'use strict';
 const createResponse = (intent, tvshow, person) => {
+  console.log(response);
   if(tvshow.Response === 'True') {
     let {
       Title,
@@ -72,7 +73,7 @@ const createResponse = (intent, tvshow, person) => {
       // }
     }
   }
-  if(person.Response === 'True'){
+  else if(person.Response === 'True'){
     console.log("Person mo ito");
     let{
       name,

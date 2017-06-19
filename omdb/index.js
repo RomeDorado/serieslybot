@@ -5,16 +5,14 @@ const config = require('../config');
 const getInfo = data => {
   let intent = data.entities.intent && data.entities.intent[0].value || 'tvInfo';
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
-  let person = data.entities.person && data.entities.person[0].value || null;
   return new Promise((resolve, reject) => {
-    console.log(intent + " " + tvshow + " " + person);
-    if(tvshow != null) {
+    if(tvshow) {
       // Fetch data from OMDB
       request({
         uri: "https://www.omdbapi.com",
         qs: {
           t: tvshow,
-          plot: 'full',
+          plot: 'short',
           r: 'json',
           apiKey: config.OMDB_API_KEY
         },
@@ -27,23 +25,7 @@ const getInfo = data => {
           reject(error);
         }
       });
-    }
-    else if(person != null){
-      //Fetch data from TMDB
-      request({
-        uri: "http://api.tvmaze.com/search/people",
-        qs: {
-          q: person
-        },
-        method: 'GET'
-      }, (error, response, body) => {
-        console.log(JSON.parse(body));
-        if(!error && response.statusCode === 200){
-          resolve(createResponse(intent, JSON.parse(body)));
-        } else{
-          reject(error);
-        }
-      });
+
     }
     else {
       reject("Entities not found!");

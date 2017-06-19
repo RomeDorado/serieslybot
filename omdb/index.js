@@ -5,10 +5,7 @@ const config = require('../config');
 const getInfo = data => {
   let intent = data.entities.intent && data.entities.intent[0].value || 'tvInfo';
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
-<<<<<<< HEAD
-=======
   let person = data.entities.person && data.entities.person[0].value || null;
->>>>>>> 4575d45a6c58e2697839ca3762db982968875cb5
   return new Promise((resolve, reject) => {
     console.log(intent + " " + tvshow + " " + person);
     if(tvshow != null) {

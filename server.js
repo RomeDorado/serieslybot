@@ -40,12 +40,13 @@ server.post('/', (req, res, next) => {
 			message
 		} = msg;
 
-		if(message.text) {
+		if(message.text || (postback && postback.payload.includes("menu"))) {
 			// Process the message here
 			// f.txt(sender, `You said: ${message.text}`);
 
 			//WIT Message API
-			wit.message(message.text, {})
+			let messageTxt = postback ? postback.payload.split(":")[1] : message.text;
+			wit.message(messageTxt, {})
 				.then(omdb)
 				.then(response => {
 					f.txt(sender, response.text);
@@ -55,7 +56,8 @@ server.post('/', (req, res, next) => {
 				})
 				.catch(error => console.log(error));
 		}
-		})
+	});
+	return next();
 });
 
 

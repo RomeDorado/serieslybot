@@ -1,7 +1,6 @@
 'use strict';
 const createResponse = (intent, tvshow, person) => {
-  console.log(response);
-  if(tvshow.Response === 'True') {
+  if(tvshow.Response === 'True' || person.Response === 'True') {
     let {
       Title,
       Type,
@@ -14,6 +13,10 @@ const createResponse = (intent, tvshow, person) => {
       Writer,
       totalSeasons
     } = tvshow;
+    let {
+      name,
+      profile_path
+    } = person;
 
     switch(intent) {
       case 'tvInfo' : {
@@ -63,6 +66,15 @@ const createResponse = (intent, tvshow, person) => {
             image: null
           }
         }
+
+        case 'personInfo': {
+          let str = `${name} is an actor. :)`;
+          return{
+            text: str,
+            image: profile_path
+          }
+        }
+
       }
 
       // default: {
@@ -73,26 +85,7 @@ const createResponse = (intent, tvshow, person) => {
       // }
     }
   }
-  else if(person.Response === 'True'){
-    console.log("Person mo ito");
-    let{
-      name,
-      profile_path
-    } = person;
-
-    switch(intent){
-
-      case 'personInfo': {
-        let str = `${name} is an actor. :)`;
-        return{
-          text: str,
-          image: profile_path
-        }
-      }
-
-    }
-
-  } else {
+ else {
     return {
       text: "I don't seem to understand your question!",
       image: null

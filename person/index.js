@@ -3,9 +3,11 @@ const createResponsePerson = (intent, person) => {
   if(person){
     console.log("Person mo ito");
     let {      
+      results: [{
       name,
       profile_path
-    } = person.results;
+      }]
+    } = person;
     switch(intent){
         
       case 'personInfo': {

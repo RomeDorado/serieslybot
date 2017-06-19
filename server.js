@@ -48,7 +48,7 @@ server.post('/', (req, res, next) => {
 			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
-					console.log("thisis the response" + response);
+					//console.log("thisis the response" + response);
 					f.txt(sender, response.text);
 					if(response.image) {
 						f.img(sender, response.image);

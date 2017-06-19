@@ -33,7 +33,8 @@ const getInfo = data => {
       request({
         uri: "https://api.themoviedb.org/3/search/person?api_key=92b2df3080b91d92b31eacb015fc5497",
         qs: {
-          query: person
+          query: person,
+          page: '1'
         },
         method: 'GET'
       }, (error, response, body) => {

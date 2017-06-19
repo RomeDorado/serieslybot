@@ -7,7 +7,8 @@ if(process.env.NODE_ENV === 'production') {
 			VERIFY_TOKEN: process.env.VERIFY_TOKEN,
 			APP_SECRET: process.env.APP_SECRET
 		},
-		OMDB_API_KEY: process.env.OMDB_API_KEY
+		OMDB_API_KEY: process.env.OMDB_API_KEY,
+		TMDB_API_KEY: process.env.TMDB_API_KEY
 	}
 } else {
 	module.exports = require('./development.json');

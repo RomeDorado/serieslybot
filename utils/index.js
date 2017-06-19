@@ -1,5 +1,5 @@
 'use strict';
-const createResponse = (intent, tvshow) => {
+const createResponse = (intent, tvshow, person) => {
   if(tvshow.Response === 'True') {
     let {
       Title,
@@ -71,6 +71,25 @@ const createResponse = (intent, tvshow) => {
       //   }
       // }
     }
+  }
+  else if(person.Response === 'True'){
+    let{
+      name,
+      profile_path
+    } = person;
+
+    switch(intent){
+
+      case 'personInfo': {
+        let str = `${name} is an actor. :)`;
+        return{
+          text: str,
+          image: profile_path
+        }
+      }
+
+    }
+
   } else {
     return {
       text: "I don't seem to understand your question!",

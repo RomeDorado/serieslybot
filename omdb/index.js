@@ -5,7 +5,7 @@ const config = require('../config');
 const getInfo = data => {
   let intent = data.entities.intent && data.entities.intent[0].value || 'tvInfo';
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
-  let person = data.entities.person && data.entities.person[0].value || null;  
+  let person = data.entities.person && data.entities.person[0].value || null;
   return new Promise((resolve, reject) => {
     console.log(intent + " " + tvshow + " " + person);
     if(tvshow != null) {
@@ -49,7 +49,6 @@ const getInfo = data => {
       reject("Entities not found!");
     }
   });
-
 }
 
 module.exports = getInfo;

@@ -45,8 +45,7 @@ server.post('/', (req, res, next) => {
 			// f.txt(sender, `You said: ${message.text}`);
 
 			//WIT Message API
-			
-			wit.message( message.text, {})
+			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
 					f.txt(sender, response.text);
@@ -54,14 +53,9 @@ server.post('/', (req, res, next) => {
 						f.img(sender, response.image);
 					}
 				})
-				.catch(error => console.log(error));				
+				.catch(error => console.log(error));
 		}
-		console.log("this is payload" + postback);
-		if(postback.payload === "menu:hello"){
-			f.txt(sender, "Welcome bro!");
-		}
-	});
-	return next();
+		})
 });
 
 

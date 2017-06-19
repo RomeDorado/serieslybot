@@ -1,6 +1,6 @@
 'use strict';
 const request = require('request');
-const FBeamer = require('../fbeamer');
+const FBeamer = require('./fbeamer');
 const f = new FBeamer(config.FB)
 const createResponse = require('../utils');
 const config = require('../config');

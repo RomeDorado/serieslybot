@@ -7,7 +7,7 @@ const getInfo = data => {
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
   let person = data.entities.person & data.entities.person[0].value || null;
   return new Promise((resolve, reject) => {
-    if(tvshow != null) {
+    if(tvshow) {
       // Fetch data from OMDB
       request({
         uri: "https://www.omdbapi.com",
@@ -27,7 +27,7 @@ const getInfo = data => {
         }
       });
     }
-    else if(person != null){
+    else if(person){
       //Fetch from TMDB
       request({
         uri: "https://api.themoviedb.org/3/search/person",

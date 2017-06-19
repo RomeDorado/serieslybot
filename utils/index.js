@@ -79,7 +79,7 @@ const createResponse = (intent, tvshow, person) => {
     } = person;
 
     switch(intent){
-      case 'personInfo'{
+      case 'personInfo':{
         let str = `${name}`;
         return{
           text: str,

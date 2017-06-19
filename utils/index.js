@@ -7,7 +7,8 @@ const createResponse = (intent, tvshow) => {
       Plot,
       Director,
       Actors,
-      Poster
+      Poster,
+      Released
     } = tvshow;
 
     switch(intent) {
@@ -29,6 +30,14 @@ const createResponse = (intent, tvshow) => {
 
       case 'cast': {
         let str = `The main cast of ${Title} (${Year}) are ${Actors}.`;
+        return{
+          text: str,
+          image: null
+        }
+      }
+
+      case 'releaseYear': {
+        let str = `${Title} was released on ${Released}.`;
         return{
           text: str,
           image: null

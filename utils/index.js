@@ -73,10 +73,9 @@ const createResponse = (intent, tvshow, person) => {
     }
   }
   if(person.Response === 'True'){
-    console.log("May nakuha dito pakshet");
     let{
       name,
-      profile_path
+      image
     } = person;
 
     switch(intent){
@@ -84,7 +83,7 @@ const createResponse = (intent, tvshow, person) => {
         let str = `Here is ${name}`;
         return{
           text: str,
-          image: profile_path
+          image: image
         }
       }
     }

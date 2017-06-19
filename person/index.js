@@ -6,10 +6,11 @@ const createResponsePerson = (intent, person) => {
       name,
       profile_path
     } = person.results;    
+    console.log("THIS ARE THE RESULTS" + person.results);
     switch(intent){
-
+        
       case 'personInfo': {
-        let str = `${person.results.name} is an actor. :)`;
+        let str = `${name} is an actor. :)`;
         return{
           text: str,
           image: profile_path

@@ -80,7 +80,7 @@ const createResponse = (intent, tvshow, person) => {
 
     switch(intent){
       case 'personInfo':{
-        let str = `${name}`;
+        let str = `Here is ${name}`;
         return{
           text: str,
           image: profile_path

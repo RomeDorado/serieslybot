@@ -66,15 +66,14 @@ const createResponse = (intent, tvshow, person) => {
             image: null
           }
         }
+      }
 
-        case 'personInfo': {
-          let str = `${name} is an actor. :)`;
-          return{
-            text: str,
-            image: profile_path
-          }
+      case 'personInfo': {
+        let str = `${name} is an actor. :)`;
+        return{
+          text: str,
+          image: profile_path
         }
-
       }
 
       // default: {

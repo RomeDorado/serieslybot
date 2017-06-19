@@ -103,5 +103,8 @@ const createResponsePerson = (intent, person) => {
   }
 }
 
-module.exports = createResponse;
-module.exports = createResponsePerson;
+module.exports = {
+createResponse,
+createResponsePerson
+}
+

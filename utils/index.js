@@ -75,10 +75,10 @@ const createResponse = (intent, tvshow, person) => {
   }
   else if(person.Response === 'True'){
     console.log("Person mo ito");
-    let{
+    let results = [{      
       name,
       profile_path
-    } = person;
+    }] = person;
 
     switch(intent){
 

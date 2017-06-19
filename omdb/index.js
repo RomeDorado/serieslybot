@@ -5,8 +5,13 @@ const config = require('../config');
 const getInfo = data => {
   let intent = data.entities.intent && data.entities.intent[0].value || 'tvInfo';
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
+<<<<<<< HEAD
+=======
+  let person = data.entities.person && data.entities.person[0].value || null;
+>>>>>>> 4575d45a6c58e2697839ca3762db982968875cb5
   return new Promise((resolve, reject) => {
-    if(tvshow) {
+    console.log(intent + " " + tvshow + " " + person);
+    if(tvshow != null) {
       // Fetch data from OMDB
       request({
         uri: "https://www.omdbapi.com",
@@ -18,14 +23,32 @@ const getInfo = data => {
         },
         method: 'GET'
       }, (error, response, body) => {
+        console.log(JSON.parse(body));
         if(!error && response.statusCode === 200) {
           resolve(createResponse(intent, JSON.parse(body)));
         } else {
           reject(error);
         }
       });
-
-    } else {
+    }
+    else if(person != null){
+      //Fetch data from TMDB
+      request({
+        uri: "https://api.themoviedb.org/3/search/person?api_key=92b2df3080b91d92b31eacb015fc5497",
+        qs: {
+          query: person
+        },
+        method: 'GET'
+      }, (error, response, body) => {
+        console.log(JSON.parse(body));
+        if(!error && response.statusCode === 200){
+          resolve(createResponse(intent, JSON.parse(body)));
+        } else{
+          reject(error);
+        }
+      });
+    }
+    else {
       reject("Entities not found!");
     }
   });

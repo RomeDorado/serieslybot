@@ -1,13 +1,18 @@
 'use strict';
-const createResponse = (intent, tvshow) => {
+const createResponse = (intent, tvshow, person) => {
+  console.log(intent + " " + tvshow + " " + person);
   if(tvshow.Response === 'True') {
     let {
       Title,
+      Type,
       Year,
       Plot,
       Director,
       Actors,
-      Poster
+      Poster,
+      Released,
+      Writer,
+      totalSeasons
     } = tvshow;
 
     switch(intent) {
@@ -19,22 +24,47 @@ const createResponse = (intent, tvshow) => {
         }
       }
 
-      // case 'releaseYear' : {
-      //   let str = `${Title} was released in ${Year}.`;
-      //   return {
-      //     text: str,
-      //     image: null
-      //   }
-      // }
-      //
       case 'director' : {
-        let str = `${Title} (${Year}) was directed by ${Director}.`;
+        let str = `${Title} (${Year}) was directed by ${Director} and written by ${Writer}.`;
         return {
           text: str,
           image: null
         }
       }
-      //
+
+      case 'cast': {
+        let str = `The main cast of ${Title} (${Year}) are ${Actors}.`;
+        return{
+          text: str,
+          image: null
+        }
+      }
+
+      case 'releaseYear': {
+        let str = `${Title} was released on ${Released}.`;
+        return{
+          text: str,
+          image: null
+        }
+      }
+
+      case 'numberOfSeasons': {
+        if(Type == 'movie'){
+          let str = `${Title} is not a TV Series. Please try again.`;
+          return{
+            text: str,
+            image: null
+          }
+        }
+        else if(Type == 'series'){
+          let str = `${Title} currently has ${totalSeasons} season(s).`;
+          return{
+            text: str,
+            image: null
+          }
+        }
+      }
+
       // default: {
       //   return {
       //     text: "Always at your service :)",
@@ -42,6 +72,26 @@ const createResponse = (intent, tvshow) => {
       //   }
       // }
     }
+  }
+  else if(person.Response === 'True'){
+    console.log("Person mo ito");
+    let{
+      name,
+      profile_path
+    } = person;
+
+    switch(intent){
+
+      case 'personInfo': {
+        let str = `${name} is an actor. :)`;
+        return{
+          text: str,
+          image: profile_path
+        }
+      }
+
+    }
+
   } else {
     return {
       text: "I don't seem to understand your question!",

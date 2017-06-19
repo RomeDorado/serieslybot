@@ -27,7 +27,7 @@ const getInfo = data => {
         }
       });
     }
-    else if(person){
+    if(person){
       //Fetch from TMDB
       request({
         uri: "https://api.themoviedb.org/3/search/person",

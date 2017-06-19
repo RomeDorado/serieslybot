@@ -1,6 +1,5 @@
 'use strict';
 const createResponse = (intent, tvshow, person) => {
-  console.log(intent + " " + tvshow + " " + person);
   if(tvshow.Response === 'True') {
     let {
       Title,
@@ -98,5 +97,6 @@ const createResponse = (intent, tvshow, person) => {
       image: null
     }
   }
+  console.log(intent + " " + tvshow + " " + person);
 }
 module.exports = createResponse;

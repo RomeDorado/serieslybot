@@ -78,8 +78,6 @@ const createResponse = (intent, tvshow, person) => {
       profile_path
     } = person;
 
-
-    console.log("personInfo dito");
     switch(intent){
       case 'personInfo':{
         let str = `Here is ${name}`;

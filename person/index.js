@@ -2,14 +2,16 @@
 const createResponsePerson = (intent, person) => {
   if(person){
     console.log("Person mo ito");
+
     let {      
       results: [{
       name,
       profile_path
       }]
+
     } = person;
     switch(intent){
-        
+
       case 'personInfo': {
         let str = `${name} is an actor. :)`;
         return{

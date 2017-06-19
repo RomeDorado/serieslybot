@@ -73,6 +73,7 @@ const createResponse = (intent, tvshow, person) => {
     }
   }
   if(person.Response === 'True'){
+    console.log("May nakuha dito pakshet");
     let{
       name,
       profile_path

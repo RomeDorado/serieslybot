@@ -26,7 +26,8 @@ const getInfo = data => {
         }
       });
 
-    } else {
+    }
+    else {
       reject("Entities not found!");
       console.log(intent);
     }

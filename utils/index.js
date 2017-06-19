@@ -19,14 +19,6 @@ const createResponse = (intent, tvshow) => {
         }
       }
 
-      // case 'releaseYear' : {
-      //   let str = `${Title} was released in ${Year}.`;
-      //   return {
-      //     text: str,
-      //     image: null
-      //   }
-      // }
-      //
       case 'director' : {
         let str = `${Title} (${Year}) was directed by ${Director}.`;
         return {
@@ -34,7 +26,15 @@ const createResponse = (intent, tvshow) => {
           image: null
         }
       }
-      //
+
+      case 'cast': {
+        let str = `The main cast of ${Title} (${Year}) are ${Actors}.`;
+        return{
+          text: str,
+          image: null
+        }
+      }
+
       // default: {
       //   return {
       //     text: "Always at your service :)",

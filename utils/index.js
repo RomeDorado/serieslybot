@@ -8,7 +8,8 @@ const createResponse = (intent, tvshow) => {
       Director,
       Actors,
       Poster,
-      Released
+      Released,
+      Writer
     } = tvshow;
 
     switch(intent) {
@@ -21,7 +22,7 @@ const createResponse = (intent, tvshow) => {
       }
 
       case 'director' : {
-        let str = `${Title} (${Year}) was directed by ${Director}.`;
+        let str = `${Title} (${Year}) was directed by ${Director} and written by ${Writer}.`;
         return {
           text: str,
           image: null

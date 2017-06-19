@@ -7,6 +7,7 @@ const getInfo = data => {
   let tvshow = data.entities.tvshow && data.entities.tvshow[0].value || null;
   let person = data.entities.person && data.entities.person[0].value || null;
   return new Promise((resolve, reject) => {
+    console.log(intent + " " + tvshow + " " + person);
     if(tvshow != null) {
       // Fetch data from OMDB
       request({

@@ -2,11 +2,10 @@
 const createResponsePerson = (intent, person) => {
   if(person){
     console.log("Person mo ito");
-    let {      
+    let results = [{      
       name,
       profile_path
-    } = person.results;    
-    console.log("THIS ARE THE RESULTS" + person.results);
+    }] = person;    
     switch(intent){
         
       case 'personInfo': {

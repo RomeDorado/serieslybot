@@ -31,9 +31,9 @@ const getInfo = data => {
     else if(person != null){
       //Fetch data from TMDB
       request({
-        uri: "http://api.tvmaze.com/search/people",
+        uri: "https://api.themoviedb.org/3/search/person?api_key=92b2df3080b91d92b31eacb015fc5497",
         qs: {
-          q: person
+          query: person
         },
         method: 'GET'
       }, (error, response, body) => {

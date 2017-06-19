@@ -75,7 +75,37 @@ const createResponse = (intent, tvshow) => {
     }
   }
 }
+/*
 
+const createResponsePerson = (intent, person) => {
+  if(person.Response === 'True'){
+    console.log("Person mo ito");
+    let results = {
+      name,
+      profile_path
+    } = person;
 
+    switch(intent){
+
+      case 'personInfo': {
+        let str = `${name} is an actor. :)`;
+        return{
+          text: str,
+          image: profile_path
+        }
+      }
+
+    }
+
+  } else {
+    return {
+      text: "I don't seem to understand your question!",
+      image: null
+    }
+  }
+  console.log(intent + " " + tvshow + " " + person);
+}
+
+*/
 module.exports = createResponse;
 

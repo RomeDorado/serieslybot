@@ -1,5 +1,5 @@
 'use strict';
-const createResponse = (intent, tvshow, person) => {
+const createResponse = (intent, tvshow) => {
   console.log(intent + " " + tvshow + " " + person);
   if(tvshow.Response === 'True') {
     let {

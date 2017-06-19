@@ -6,7 +6,7 @@ const createResponsePerson = (intent, person) => {
       name,
       profile_path
     } = person.results;
-
+    console.log(person.results);
     switch(intent){
 
       case 'personInfo': {

@@ -56,7 +56,7 @@ server.post('/', (req, res, next) => {
 				})
 				.catch(error => console.log(error));				
 		}
-		console.log("this is payload" + postback.payload );
+		console.log("this is payload" + postback);
 		if(postback.payload === "menu:hello"){
 			f.txt(sender, "Welcome bro!");
 		}

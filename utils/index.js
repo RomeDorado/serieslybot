@@ -72,7 +72,7 @@ const createResponse = (intent, tvshow, person) => {
       // }
     }
   }
-  else if(person.Response === 'True'){
+  if(person.Response === 'True'){
     console.log("Person mo ito");
     let{
       name,

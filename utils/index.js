@@ -79,6 +79,7 @@ const createResponse = (intent, tvshow, person) => {
     } = person;
 
     switch(intent){
+      console.log("personInfo dito");
       case 'personInfo':{
         let str = `Here is ${name}`;
         return{
@@ -87,8 +88,7 @@ const createResponse = (intent, tvshow, person) => {
         }
       }
     }
-  }
-  else {
+  } else {
     return {
       text: "I don't seem to understand your question!",
       image: null

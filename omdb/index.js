@@ -37,9 +37,11 @@ const getInfo = data => {
         },
         method: 'GET'
       }, (error, response, body) => {
-        console.log(JSON.parse(body[0]));
+        var body = JSON.parse(req.body);
+        var results = body[0];
+        console.log(JSON.parse(results));
         if(!error && response.statusCode === 200){
-          resolve(createResponse(intent, JSON.parse(body)));
+          resolve(createResponse(intent, JSON.parse(results)));
         } else{
           reject(error);
         }

@@ -3,13 +3,15 @@ const createResponse = (intent, tvshow) => {
   if(tvshow.Response === 'True') {
     let {
       Title,
+      Type,
       Year,
       Plot,
       Director,
       Actors,
       Poster,
       Released,
-      Writer
+      Writer,
+      totalSeasons
     } = tvshow;
 
     switch(intent) {
@@ -42,6 +44,23 @@ const createResponse = (intent, tvshow) => {
         return{
           text: str,
           image: null
+        }
+      }
+
+      case 'numberOfSeasons': {
+        if(Type == 'movie'){
+          let str = `${Title} is not a TV Series. Please try again.`;
+          return{
+            text: str,
+            image: null
+          }
+        }
+        else if(Type == 'series'){
+          let str = `${Title} currently has ${totalSeasons} season(s).`;
+          return{
+            text: str,
+            image: null
+          }
         }
       }
 

@@ -22,7 +22,7 @@ const createBiography = (bio) => {
       
     }
 
-    if(s.length > 500){
+    if(s.length > 400){
       for (var i=1; i <= 2; i++){
       
       s += biog[i] + ".";

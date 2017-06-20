@@ -1,7 +1,7 @@
 'use strict'
 const config = require('../config');
 const request = require('request');
-const createBiography = require('../bio')
+const createBiography = require('../bio');
 const createResponsePerson = (intent, person) => {
   return new Promise((resolve, reject) => {
     if(person){

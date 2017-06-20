@@ -22,14 +22,14 @@ const createBiography = (bio) => {
       
     }
 
-    if(s.length > 400){
+   /* if(s.length > 400){
       
       
       s = biog[2] + ".";
       
     
-  }
-    console.log(s + "test print");
+  }*/
+    console.log(s.length + "test print");
     return{
       text: str + s    
     }

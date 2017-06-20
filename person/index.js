@@ -10,7 +10,7 @@ const createResponsePerson = (intent, person) => {
       known_for [{
         title
       }]
-      }]
+    }]
 
     } = person;
     switch(intent){

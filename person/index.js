@@ -22,7 +22,7 @@ const createResponsePerson = (intent, person) => {
       request({
         uri: "https://api.themoviedb.org/3/person/?",
         qs: {
-          person_id: id,
+          person_id: `${id}`,
           api_key: config.TMDB_API_KEY,
           append_to_response: "images"
         },

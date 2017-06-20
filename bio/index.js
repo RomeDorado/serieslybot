@@ -16,12 +16,12 @@ const createBiography = (bio) => {
     let str = `${name},`;
     for (var i=1; i <= 5; i++){
       var s; 
-      s = biog[i];
+      s = s.concat(biog[i]);
       console.log(s);
     }
 
     return{
-      text: str + s
+      text: str + s      
     }
   }
 }

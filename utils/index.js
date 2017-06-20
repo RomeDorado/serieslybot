@@ -18,7 +18,7 @@ const createResponse = (intent, tvshow) => {
 
     switch(intent) {
       case 'tvInfo' : {
-        let str = `${Title} (${Year}). This film was directed by ${Director} and starred ${Actors}. ${Plot}`.subString(0, 360);
+        let str = `${Title} (${Year}). This film was directed by ${Director} and starred ${Actors}. ${Plot}`;
         return {
           text: str,
           image: Poster

@@ -12,7 +12,7 @@ const createBiography = (bio) => {
     } = bio;
 
     
-    let str = `${name}, ${biography}`.substring(0,360);
+    let str = `${name}, ${biography}`.substring(0,400);
     
 
     return{

@@ -15,7 +15,8 @@ const createBiography = (bio) => {
     //let str = `${name}, ${biography}`.substring(0,400);    
     let str = `${name},`;
     for (var i=1; i <= 5; i++){
-      var s = biog[i];
+      var s; 
+      s = biog[i];
     }
 
     return{

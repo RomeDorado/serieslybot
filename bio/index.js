@@ -21,7 +21,7 @@ const createBiography = (bio) => {
     }
 
     return{
-      text: str + v      
+      text: str + s    
     }
   }
 }

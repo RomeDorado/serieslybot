@@ -11,9 +11,10 @@ const createBiography = (bio) => {
       biography,
     } = bio;
 
-    
-    let str = `${name}, ${biography}`.substring(0,400);
-    
+    var biog = [] = biography.split(".");
+    //let str = `${name}, ${biography}`.substring(0,400);
+    var biogr = biog[3];
+    let str = `${name}, ${biogr}`.substring(0,400);
 
     return{
       text: str

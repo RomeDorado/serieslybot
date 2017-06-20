@@ -7,14 +7,16 @@ const createResponsePerson = (intent, person) => {
       results: [{
       name,
       profile_path,
-      known_for
+      known_for{
+        title
+      }
       }]
 
     } = person;
     switch(intent){
 
       case 'personInfo': {
-        let str = `${name} is an actor. and he is know for the movie ${known_for}`;
+        let str = `${name} is an actor. and he is know for the movie ${title}`;
         return{
           text: str,
           image: profile_path

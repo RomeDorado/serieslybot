@@ -7,7 +7,7 @@ const createResponsePerson = (intent, person) => {
       results: [{
       name,
       profile_path
-      known_for [{
+      known_for: [{
         title
       }]
       }]

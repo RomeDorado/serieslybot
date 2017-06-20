@@ -20,7 +20,7 @@ const createBiography = (bio) => {
       s += biog[i] + ".";
       
     }
-    console.log(s);
+    console.log(s + "test print");
     return{
       text: str + s    
     }

@@ -13,7 +13,7 @@ const createBiography = (bio) => {
 
     var biog = [] = biography.split(".");
     //let str = `${name}, ${biography}`.substring(0,400);
-    var biogr = biog[3];
+    var biogr = biog[6];
     let str = `${name}, ${biogr}`.substring(0,400);
 
     return{

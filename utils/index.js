@@ -108,4 +108,3 @@ const createResponsePerson = (intent, person) => {
 
 */
 module.exports = createResponse;
-

@@ -13,13 +13,13 @@ const createBiography = (bio) => {
 
     var biog = [] = biography.split(".");
     //let str = `${name}, ${biography}`.substring(0,400);    
-    let str = `${name},`,
+    let str = `${name},`;
     for (var i=1; i <= 5; i++){
-      biog[i];
-    };
+      var s = biog[i];
+    }
 
     return{
-      text: str
+      text: str + s
     }
   }
 }

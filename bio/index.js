@@ -19,7 +19,7 @@ const createBiography = (bio) => {
       s = biog[i];
       var v = '';
       v.concat(s);
-      console.log(s);
+      console.log(v);
     }
 
     return{

@@ -17,7 +17,7 @@ const createResponsePerson = (intent, person) => {
     switch(intent){
 
       case 'personInfo': {
-        if(title == null){
+        if(title === null){
           let str = `${name} is know for ${original_name}`;
         }
         else{

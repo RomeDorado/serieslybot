@@ -17,16 +17,19 @@ const createResponsePerson = (intent, person) => {
     switch(intent){
 
       case 'personInfo': {
-        if(!title){
+        if(title === undefined){
           let str = `${name} is know for ${original_name}`;
+          return{
+            text: str,
+            image: profile_path
+          }
         }
         else{
           let str = `${name} is know for ${title}`;
-        }
-
-        return{
-          text: str,
-          image: profile_path
+          return{
+            text: str,
+            image: profile_path
+          }
         }
       }
     }

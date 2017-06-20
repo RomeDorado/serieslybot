@@ -9,12 +9,7 @@ const createResponsePerson = (intent, person) => {
 
       let {
         results: [{
-        name,
-        id,
-        known_for:[{
-          title,
-          original_name
-        }]
+        id
         }]
 
       } = person;
@@ -24,11 +19,10 @@ const createResponsePerson = (intent, person) => {
         qs: {
           person_id: `${id}`,
           api_key: config.TMDB_API_KEY,
-          append_to_response: "images"
         },
         method: "GET"
       }, (error, response, body) => {
-        console.log(JSON.parse(body) +"umabot ng request");
+        console.log(response);
         if(!error && response.statusCode === 200){
           resolve(createBiography(JSON.parse(body)));
         } else{

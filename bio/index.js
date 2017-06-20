@@ -16,10 +16,8 @@ const createBiography = (bio) => {
     let str = `${name},`;
     for (var i=1; i <= 5; i++){
       var s =''; 
-      s = biog[i];
-      var v = '';
-      v.concat(s);
-      console.log(v);
+      s += biog[i];
+      
     }
 
     return{

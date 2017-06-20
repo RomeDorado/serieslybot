@@ -25,7 +25,7 @@ const createResponsePerson = (intent, person) => {
           }
         }
         else{
-          let str = `${name} is know for ${title}`;
+          let str = `${name} is known for ${title}`;
           return{
             text: str,
             image: profile_path

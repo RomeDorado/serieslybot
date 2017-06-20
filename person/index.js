@@ -17,10 +17,10 @@ const createResponsePerson = (intent, person) => {
     switch(intent){
 
       case 'personInfo': {
-        if(title == undefined){
+        if(title == null){
             let str = `${name} is an actor. and he is know for the movie ${original_name}`;
         }
-        else if(original_name == undefined){
+        else if(original_name == null){
             let str = `${name} is an actor. and he is know for the movie ${title}`;
         }
         return{

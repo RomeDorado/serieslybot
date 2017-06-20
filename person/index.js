@@ -6,7 +6,7 @@ const createResponsePerson = (intent, person) => {
     let {
       results: [{
       name,
-      profile_path
+      profile_path,
       known_for: [{
         title
       }]

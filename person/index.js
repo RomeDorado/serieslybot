@@ -26,7 +26,7 @@ const createResponsePerson = (intent, person) => {
       },
       method: "GET"
     }, (error, response, body) => {
-      console.log(JSON.parse(body));
+      console.log(JSON.parse(body) +"umabot ng request");
       if(!error && response.statusCode === 200){
         resolve(createBiography(JSON.parse(body)));
       } else{

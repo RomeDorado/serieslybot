@@ -11,7 +11,7 @@ const createBiography = (bio) => {
       biography,
     } = bio;
 
-    let str = `${name}, ${biography}`.subString(0,320);
+    let str = `${name}, ${biography}`;
 
     return{
       text: str

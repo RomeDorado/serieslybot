@@ -8,7 +8,8 @@ const createResponsePerson = (intent, person) => {
       name,
       profile_path,
       known_for:[{
-        title
+        title,
+        original_name
       }]
       }]
 
@@ -16,13 +17,17 @@ const createResponsePerson = (intent, person) => {
     switch(intent){
 
       case 'personInfo': {
-        let str = `${name} is an actor. and he is know for the movie ${title}`;
+        if(title == "undefined"){
+            let str = `${name} is an actor. and he is know for the movie ${original_name}`;
+        }
+        else if(original_name == "undefined"){
+            let str = `${name} is an actor. and he is know for the movie ${title}`;
+        }
         return{
           text: str,
           image: profile_path
         }
       }
-
     }
 
   } else {

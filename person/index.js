@@ -17,7 +17,7 @@ const createResponsePerson = (intent, person) => {
       request({
         uri: "https://api.themoviedb.org/3/person/?",
         qs: {
-          ${id},
+          {id},
           api_key: "92b2df3080b91d92b31eacb015fc5497",
         },
         method: "GET"

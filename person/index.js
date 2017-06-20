@@ -1,4 +1,7 @@
 'use strict'
+const config = require('../config');
+const request = require('request');
+const createBiography = require('../bio')
 const createResponsePerson = (intent, person) => {
   if(person){
     console.log("Person mo ito");
@@ -6,7 +9,7 @@ const createResponsePerson = (intent, person) => {
     let {
       results: [{
       name,
-      profile_path,
+      id,
       known_for:[{
         title,
         original_name
@@ -14,25 +17,22 @@ const createResponsePerson = (intent, person) => {
       }]
 
     } = person;
-    switch(intent){
 
-      case 'personInfo': {
-        if(title === undefined){
-          let str = `${name} is know for ${original_name}`;
-          return{
-            text: str,
-            image: profile_path
-          }
-        }
-        else{
-          let str = `${name} is known for ${title}`;
-          return{
-            text: str,
-            image: profile_path
-          }
-        }
+    request({
+      uri: "https://api.themoviedb.org/3/person?api_key=92b2df3080b91d92b31eacb015fc5497",
+      qs: {
+        person_id: id,
+        append_to_response: "images"
+      },
+      method: "GET"
+    }, (error, response, body) => {
+      console.log(JSON.parse(body));
+      if(!error && response.statusCode === 200){
+        resolve(createBiography(JSON.parse(body)));
+      } else{
+        reject(error);
       }
-    }
+    });
 
   } else {
     return {

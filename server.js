@@ -52,7 +52,7 @@ server.post('/', (req, res, next) => {
 					console.log("THIS IS THE RESPONSE!!" + response.text);
 					f.txt(sender, response.text);
 					if(response.image) {
-						f.img(sender, response.image);
+						f.img(sender, response.image + "ITO ATA YUNG NULL");
 					}
 				})
 				.catch(error => console.log(error + "this is the error"));

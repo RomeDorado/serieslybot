@@ -17,6 +17,7 @@ const createBiography = (bio) => {
     for (var i=1; i <= 5; i++){
       var s; 
       s = biog[i];
+      console.log(s);
     }
 
     return{

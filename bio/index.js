@@ -21,6 +21,14 @@ const createBiography = (bio) => {
       s += biog[i] + ".";
       
     }
+
+    if(s.length > 500){
+      for (var i=1; i <= 2; i++){
+      
+      s += biog[i] + ".";
+      
+    }
+  }
     console.log(s + "test print");
     return{
       text: str + s    

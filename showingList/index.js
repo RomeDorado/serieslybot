@@ -8,9 +8,11 @@ const createShowingList = (showingList) => {
     console.log("Umabot ng showinglist pagkshet");
     let{
         
-      items: [{
-        listitem: {
+      items: [{ 
+        pagemap: {
+          listitem: {
             name = []
+            }
         }        
       }]
     } = showingList;

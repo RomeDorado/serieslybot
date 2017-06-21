@@ -7,9 +7,9 @@ const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist");
     let{      
-        listitem:{
+        
             name 
-            }                                
+        
     } = showList;
     
     console.log(name + "this is the name");

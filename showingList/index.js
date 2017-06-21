@@ -9,11 +9,11 @@ const createShowingList = (showingList) => {
     let{
         
       items: [{ 
-        pagemap = [0] = {
+        pagemap: [{
           listitem: {
-            name = []
+            name
             }
-        }        
+      }]        
       }]
     } = showingList;
     

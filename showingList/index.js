@@ -7,6 +7,7 @@ const createShowingList = (showingList) => {
   if(showingList){
     console.log("Umabot ng showinglist pagkshet");
     let{
+        
       items: [{
         listitem: {
             name = []

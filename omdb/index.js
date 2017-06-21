@@ -124,6 +124,7 @@ const getInfo = data => {
           q: "showing " + showing,
           cx: `011868887043149504159:-5-5cnusvca`,
           siteSearch: `https://www.clickthecity.com/`,
+          fields: 'items',
           key: `AIzaSyCOdpES79O2cqWNdxNaLs_6g68cNdWBsWw`,          
         },
         method: 'GET'

@@ -9,7 +9,7 @@ const createShowingList = (showingList) => {
     let{
         
       items: [{ 
-        pagemap: {
+        pagemap = [0] = {
           listitem: {
             name = []
             }

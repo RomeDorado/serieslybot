@@ -6,14 +6,10 @@ const createResponsePerson = (intent, person) => {
   return new Promise((resolve, reject) => {
     if(person){
       console.log("Person mo ito");
-
-
       let {
         results: [{
         id
         }]
-
-
       } = person;
 
       request({

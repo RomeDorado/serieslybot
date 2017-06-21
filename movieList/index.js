@@ -18,8 +18,9 @@ const createMovieList = (movieList) => {
     let str = `${title}, ${overview}`;
 
     return{
-    text: str,
-    image: imageURL
+      for(ctr = results.length; ctr <= 5; ctr++){
+        text: str,
+      }
     }
   }
 }

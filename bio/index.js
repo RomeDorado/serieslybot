@@ -15,21 +15,12 @@ const createBiography = (bio) => {
     var biog = [] = biography.split(".");
     //let str = `${name}, ${biography}`.substring(0,400);    
     let str = `${name},`;
-    
     for (var i=1; i <= 3; i++){
       
       s += biog[i] + ".";
       
     }
-
-    if(s.length > 500){
-      
-      
-      s = biog[2] + ".";
-      
-    
-  }
-    console.log(s.length + "test print");
+    console.log(s + "test print");
     return{
       text: str + s    
     }

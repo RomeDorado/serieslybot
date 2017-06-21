@@ -14,7 +14,7 @@ const createShowingList = (showingList) => {
       }]
     } = showingList;
     
-    console.log(JSON.parse(name) + "this is the name");
+    console.log(JSON.parse(items) + "this is the name");
     let str = `List of now showing movies: ${name}`.substring(0,320);
 
     return{

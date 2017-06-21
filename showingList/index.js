@@ -8,9 +8,9 @@ const createShowingList = (showingList) => {
     console.log("Umabot ng showinglist pagkshet");
     let{
       items: [{
-        listitem: {
+        listitem: [{
             name
-        }        
+        }]        
       }]
     } = showingList;
     

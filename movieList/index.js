@@ -17,10 +17,8 @@ const createMovieList = (movieList) => {
 
     let str = `${title}, ${overview}`.substring(0,320);
 
-    for(ctr = 0; ctr < results.length = ctr++){
-      return{
-        text: str,
-      }
+    return{
+      text: str,
     }
   }
   else{

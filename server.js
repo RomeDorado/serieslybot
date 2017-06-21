@@ -55,6 +55,13 @@ server.post('/', (req, res, next) => {
 						f.img(sender, response.image);
 					}
 				})
+				.then(response => {
+					//console.log("thisis the response" + response);
+					f.txt(sender, response.text);
+					if(response.image) {
+						f.img(sender, response.image);
+					}
+				})
 				.catch(error => console.log(error));
 		}
 		console.log(postback + "This is postback");

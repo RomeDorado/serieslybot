@@ -23,9 +23,9 @@ const wit = new Wit({
 
 //OMDB
 const omdb = require('./omdb');
-const createResponse = require('./utils');
-const createResponsePerson = require('./person');
-const createBiography = require('./bio');
+const createResponse = require('./utils')
+const createResponsePerson = require('./person')
+
 // Register the webhooks
 server.get('/', (req, res, next) => {
 	f.registerHook(req, res);

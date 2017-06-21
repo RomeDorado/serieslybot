@@ -97,9 +97,8 @@ const getInfo = data => {
     }
     else if(year != null || genre != null){
       request({
-        uri: "https://api.themoviedb.org/3/discover/tv",
+        uri: "https://api.themoviedb.org/3/discover/tv?api_key=92b2df3080b91d92b31eacb015fc5497",
         qs: {
-          api_key: config.TMDB_API_KEY,
           language: "en-US",
           sort_by: "popularity.desc",
           page: '1',

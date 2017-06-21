@@ -100,7 +100,7 @@ const getInfo = data => {
         uri: "https://api.themoviedb.org/3/discover/tv",
         qs: {
           api_key: config.TMDB_API_KEY,
-          language: en-US,
+          language: en-us,
           sort_by: popularity.desc,
           page: '1',
           // with_genres: genreID,

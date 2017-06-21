@@ -5,7 +5,7 @@ const createResponsePerson = require('../person');
 const config = require('../config');
 const createShowingList = (showList) => {
   if(showList){
-    console.log("Umabot ng showinglist" + JSON.parse(showList.listitem));
+    console.log("Umabot ng showinglist");
     let{      
         pagemap: [{
           listitem: [{

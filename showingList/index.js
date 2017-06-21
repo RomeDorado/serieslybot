@@ -3,8 +3,8 @@ const request = require('request');
 const createResponse = require('../utils');
 const createResponsePerson = require('../person');
 const config = require('../config');
-const createShowingList = (showingList) => {
-  if(showingList){
+const createShowingList = (showList) => {
+  if(showList){
     console.log("Umabot ng showinglist pagkshet");
     let{
         
@@ -15,7 +15,7 @@ const createShowingList = (showingList) => {
             }]
       }]        
       }]//items
-    } = showingList;
+    } = showList;
     
     console.log(JSON.parse(pagemap) + "this is the name");
     let str = `List of now showing movies: ${name}`.substring(0,320);

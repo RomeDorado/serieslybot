@@ -8,13 +8,13 @@ const createShowingList = (showingList) => {
     console.log("Umabot ng showinglist pagkshet");
     let{
       items: [{
-        listitem: [{
-            name
-        }]        
+        listitem: {
+            name = []
+        }        
       }]
     } = showingList;
     
-    console.log(name + "this is the name");
+    console.log(JSON.parse(name) + "this is the name");
     let str = `List of now showing movies: ${name}`.substring(0,320);
 
     return{

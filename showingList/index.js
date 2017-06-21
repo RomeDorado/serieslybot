@@ -6,14 +6,12 @@ const config = require('../config');
 const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist pagkshet");
-    let{
-        
-      
-        pagemap: [{
+    let{      
+        //pagemap: [{
           listitem: [{
             name
             }]
-      }]        
+      //}]        
       
     } = showList;
     

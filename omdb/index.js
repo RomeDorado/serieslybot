@@ -101,7 +101,7 @@ const getInfo = data => {
         qs: {
           api_key: config.TMDB_API_KEY,
           language: "en-US",
-          sort_by: popularity.desc,
+          sort_by: "popularity.desc",
           page: '1',
           // with_genres: genreID,
           primary_release_year: year

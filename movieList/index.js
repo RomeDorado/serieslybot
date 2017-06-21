@@ -22,6 +22,12 @@ const createMovieList = (movieList) => {
       image: imageURL
     }
   }
+  else{
+    return{
+      text: "I'm sorry, there must be an error. Please try again.",
+      image: null
+    }
+  }
 }
 
 module.exports = createMovieList;

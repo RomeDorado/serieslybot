@@ -37,6 +37,12 @@ const createBiography = (bio) => {
       image: imageURL
    }
   }
+  else{
+    return{
+      text: "I can't seem to find the person you are looking for. Please try again.",
+      image: null
+    }
+  }
 }
 
 module.exports = createBiography;

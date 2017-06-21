@@ -15,7 +15,7 @@ const createShowingList = (showList) => {
       
     } = showList;
     
-    console.log(JSON.parse(pagemap) + "this is the name");
+    console.log(JSON.parse(showList) + "this is the name");
     let str = `List of now showing movies: ${name}`.substring(0,320);
 
     return{

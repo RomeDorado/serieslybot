@@ -26,9 +26,9 @@ const createBiography = (bio) => {
       
       s = biog[2] + ".";
       
-    
+      
   }
-  
+
     console.log(s.length + "test print");
     return{
       text: str + s    

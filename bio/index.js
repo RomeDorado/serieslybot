@@ -9,8 +9,10 @@ const createBiography = (bio) => {
     let{
       name,
       biography,
+      profile_path
     } = bio;
     var s ='';
+    var imageURL = "http://image.tmdb.org/t/p/w185";
     //console.log(biography.length + "this is the length of chars");
     var biog = [] = biography.split(".");
     //let str = `${name}, ${biography}`.substring(0,400);
@@ -31,7 +33,8 @@ const createBiography = (bio) => {
 
    console.log(s.length + "test print");
     return{
-      text: str + s
+      text: str + s,
+      image: imageURL + profile_path
    }
   }
 }

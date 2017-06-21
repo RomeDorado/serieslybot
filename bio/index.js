@@ -11,7 +11,7 @@ const createBiography = (bio) => {
       biography,
     } = bio;
     var s =''; 
-    console.log(biography.length + "this is the length of chars");
+    //console.log(biography.length + "this is the length of chars");
     var biog = [] = biography.split(".");
     //let str = `${name}, ${biography}`.substring(0,400);    
     let str = `${name},`;
@@ -20,7 +20,7 @@ const createBiography = (bio) => {
       s += biog[i] + ".";
       
     }
-    console.log(s + "test print");
+    console.log(s.length + "test print");
     return{
       text: str + s    
     }

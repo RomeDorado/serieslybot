@@ -122,8 +122,8 @@ const getInfo = data => {
         uri: "https://www.googleapis.com/customsearch/v1?",
         qs: {
           q: "showing " + showing,
-          cx: `011868887043149504159%253A-5-5cnusvca`,
-          siteSearch: `https%253A%252F%252Fwww.clickthecity.com%252F`,
+          cx: `011868887043149504159:-5-5cnusvca`,
+          siteSearch: `https://www.clickthecity.com/`,
           key: `AIzaSyCOdpES79O2cqWNdxNaLs_6g68cNdWBsWw`,          
         },
         method: 'GET'

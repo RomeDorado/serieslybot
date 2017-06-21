@@ -5,13 +5,13 @@ const createResponsePerson = require('../person');
 const config = require('../config');
 const createShowingList = (showList) => {
   if(showList){
-    console.log("Umabot ng showinglist" + showList);
+    console.log("Umabot ng showinglist" + JSON.parse(showList.listitem));
     let{      
-        "pagemap": [{
-          "listitem": [{
+        //pagemap: [{
+          listitem: [{
             name
             }]
-      }]        
+      //}]        
       
     } = showList;
     

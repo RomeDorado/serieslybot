@@ -16,7 +16,7 @@ const createShowingList = (showList) => {
         }]
     } = showList;
     
-    console.log(name + "this is the name");
+//    console.log(name + "this is the name");
     console.log(listitem);
     for(var i = 0; i <= listitem.length; i++){
       

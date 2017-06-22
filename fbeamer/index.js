@@ -149,12 +149,9 @@ class FBeamer {
 				id
 			},
 			message: {
-				text
-			},
-			json: {
-      		recipient: {id: id},
-      		message: message,
-    }
+				//text,
+				message
+			},			
 		}
 
 		this.sendMessage(obj)

@@ -5,7 +5,6 @@ const createResponsePerson = require('../person');
 const config = require('../config');
 const createMovieList = (movieList) => {
   if(movieList){
-    console.log("Umabot ng createMovieList pagkshet");
     let{
       results: [{
         title,

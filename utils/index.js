@@ -49,7 +49,7 @@ const createResponse = (intent, tvshow) => {
 
         let str = `${Title} (${Year}). This film was directed by ${Director} and starred ${Actors}. ${Plot}`;
         return {
-          text: message,
+          text: str,
           image: Poster
         }
       }

@@ -149,9 +149,8 @@ class FBeamer {
 				id
 			},
 			message: {
-				//text,
-				message
-			},			
+				text
+			}
 		}
 
 		this.sendMessage(obj)

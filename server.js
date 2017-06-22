@@ -49,7 +49,7 @@ server.post('/', (req, res, next) => {
 			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
-					//console.log("THIS IS THE RESPONSE!!" + response.text);
+					console.log("THIS IS THE RESPONSE!!" + response.message);
 					f.txt(sender, response.text);
 					f.txt(sender, response.message);
 					if(response.image) {

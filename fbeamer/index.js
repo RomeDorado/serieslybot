@@ -142,10 +142,6 @@ class FBeamer {
 		});
 	}
 
-      
-
-
-
 	// Send a text message
 	txt(id, text) {
 		let obj = {
@@ -154,12 +150,9 @@ class FBeamer {
 			},
 			message: {
 				text
-			},
-			JSON: {
-				message
 			}
 		}
-		    
+
 		this.sendMessage(obj)
 			.catch(error => console.log(error) + "This is the error");
 	}

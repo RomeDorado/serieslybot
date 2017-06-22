@@ -51,6 +51,7 @@ server.post('/', (req, res, next) => {
 				.then(response => {
 					//console.log("THIS IS THE RESPONSE!!" + response.text);
 					f.txt(sender, response.text);
+					f.txt(sender, response.message);
 					if(response.image) {
 						f.img(sender, response.image + "ITO ATA YUNG NULL");
 					}

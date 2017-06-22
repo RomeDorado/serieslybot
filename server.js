@@ -46,7 +46,7 @@ server.post('/', (req, res, next) => {
 			// f.txt(sender, `You said: ${message.text}`);
 
 			//WIT Message API
-			wit.message(message.text, {})
+			wit.message(message.text, JSON.message, {})
 				.then(omdb)
 				.then(response => {
 					console.log("THIS IS THE RESPONSE!!" + JSON.parse(response));

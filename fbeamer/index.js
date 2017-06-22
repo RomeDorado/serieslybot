@@ -150,9 +150,6 @@ class FBeamer {
 			},
 			message: {
 				text
-			},
-			JSON: {
-				message
 			}
 		}
 

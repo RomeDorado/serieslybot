@@ -49,12 +49,11 @@ server.post('/', (req, res, next) => {
 			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
-					console.log("THIS IS THE RESPONSE!!" + response);
-					f.txt(sender, response.text);					
+					//console.log("THIS IS THE RESPONSE!!" + response.text);
+					f.txt(sender, response.text);
 					if(response.image) {
 						f.img(sender, response.image + "ITO ATA YUNG NULL");
 					}
-					
 				})
 				.catch(error => console.log(error + "this is the error"));
 		}

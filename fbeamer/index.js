@@ -150,7 +150,11 @@ class FBeamer {
 			},
 			message: {
 				text
-			}
+			},
+			json: {
+      		recipient: {id: id},
+      		message: message,
+    }
 		}
 
 		this.sendMessage(obj)

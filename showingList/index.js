@@ -19,7 +19,8 @@ const createShowingList = (showList) => {
     console.log(name + "this is the name");
     for(var i = 0; i <= listitem.length; i++){
       name++;
-    let str = `List of now showing movies: ${name}`.substring(0,320);
+    let str = `List of now showing movies: `;
+    str +=  `${name}`;
     }
     return{
       text: str,

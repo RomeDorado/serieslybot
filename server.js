@@ -54,6 +54,7 @@ server.post('/', (req, res, next) => {
 					if(response.image) {
 						f.img(sender, response.image + "ITO ATA YUNG NULL");
 					}
+					
 				})
 				.catch(error => console.log(error + "this is the error"));
 		}

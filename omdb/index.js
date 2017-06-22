@@ -132,7 +132,7 @@ const getInfo = data => {
         //console.log(response);
         // console.log(JSON.parse(body));
         var items = JSON.parse(body);
-        console.log('ITEMS =>', items.pagemap[0]);
+        console.log('ITEMS =>', items.pagemap.name);
         if(!error && response.statusCode === 200){
           resolve(createShowingList(JSON.parse(body)));
         } else{

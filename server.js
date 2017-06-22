@@ -46,10 +46,10 @@ server.post('/', (req, res, next) => {
 			// f.txt(sender, `You said: ${message.text}`);
 
 			//WIT Message API
-			wit.message(message.text, JSON.message, {})
+			wit.message(message.text, {})
 				.then(omdb)
 				.then(response => {
-					console.log("THIS IS THE RESPONSE!!" + JSON.parse(response));
+					console.log("THIS IS THE RESPONSE!!" + response);
 					f.txt(sender, response.text);					
 					if(response.image) {
 						f.img(sender, response.image + "ITO ATA YUNG NULL");

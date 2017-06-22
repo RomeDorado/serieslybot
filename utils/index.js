@@ -18,38 +18,9 @@ const createResponse = (intent, tvshow) => {
 
     switch(intent) {
       case 'tvInfo' : {
-
-        message = {
-              attachment: {
-                type: "template",
-                payload: {
-                  template_type: "generic",
-                  elements: [{
-                    title: Title,
-                    subtitle: "Is this the movie you are looking for?",
-                    image_url: "http://placehold.it/350x150",
-                    buttons: [{
-                      type: "postback",
-                      title: "Yes",
-                      payload: "Correct"
-                    }, {
-                      type: "postback",
-                      title: "No",
-                      payload: "Incorrect"
-                    }]
-                  }]
-                }
-              }
-
-
-
-				}
-
-
-
         let str = `${Title} (${Year}). This film was directed by ${Director} and starred ${Actors}. ${Plot}`;
         return {
-          text: message,
+          text: str,
           image: Poster
         }
       }
@@ -137,4 +108,3 @@ const createResponsePerson = (intent, person) => {
 
 */
 module.exports = createResponse;
-

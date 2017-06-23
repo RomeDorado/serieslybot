@@ -14,8 +14,7 @@ const createTrailer = (trailer) => {
     } = trailer;
     
 
-    let str = `${title}
-    ${link}`.substring(0,320);
+    let str = `${title} ${link}`.substring(0,320);
 
     return{
       text: str,

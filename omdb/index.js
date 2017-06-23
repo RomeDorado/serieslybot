@@ -159,7 +159,7 @@ const getInfo = data => {
         var items = JSON.parse(body);
         //console.log(JSON.parse(items.pagemap[0]));
         if(!error && response.statusCode === 200){
-          resolve(createTrailer(JSON.parse(body)));
+          resolve(createTrailer(items));
         } else{
           reject(error);
         }

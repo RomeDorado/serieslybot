@@ -142,7 +142,7 @@ const getInfo = data => {
         }
       });
     }
-    else if(tvshow != null && trailer!= null){
+    else if(trailer!= null && tvshow != null){
       request({
         uri: "https://www.googleapis.com/customsearch/v1?",
         qs: {

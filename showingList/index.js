@@ -10,14 +10,14 @@ const createShowingList = (showList) => {
         items:[{
           pagemap: {
             listitem: [{
-            name                                    
+            name            
               }]
             }
         }]
     } = showList;
     
-//    console.log(name + "this is the name");
-    console.log("listitem",JSON.parse(pagemap));
+    //console.log(name + "this is the name");
+    //console.log("listitem",JSON.parse(pagemap));
     //for(var i = 0; i <= listitem.length; i++){
       
     //let str = `List of now showing movies: `;

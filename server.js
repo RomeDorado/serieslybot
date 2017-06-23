@@ -35,6 +35,7 @@ server.get('/', (req, res, next) => {
 // Handle incoming
 server.post('/', (req, res, next) => {
 	f.incoming(req, res, msg => {
+		console.log(JSON.parse(msg));
 		const {
 			sender,
 			postback,

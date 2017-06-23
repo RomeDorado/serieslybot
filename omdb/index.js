@@ -142,7 +142,7 @@ const getInfo = data => {
         }
       });
     }
-    else if(intent == 'trailerInfo' && trailer!= null){
+    else if(intent == 'trailerInfo'){
       request({
         uri: "https://www.googleapis.com/customsearch/v1?",
         qs: {

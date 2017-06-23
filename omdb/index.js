@@ -3,6 +3,7 @@ const request = require('request');
 const createResponse = require('../utils');
 const createResponsePerson = require('../person');
 const createMovieList = require('../movieList');
+const createTrailer = require('../trailer');
 const createShowingList = require('../showingList');
 const config = require('../config');
 const getInfo = data => {
@@ -12,6 +13,7 @@ const getInfo = data => {
   let genre = data.entities.genre && data.entities.genre[0].value || null;
   let year = data.entities.year && data.entities.year[0].value || null;
   let showing = data.entities.showing && data.entities.showing[0].value || null;
+  let trailer = data.entities.trailer && data.entities.trailer[0].value || null;
   var genreID = "";
 
   //Get the Genre ID
@@ -135,6 +137,29 @@ const getInfo = data => {
         //console.log(JSON.parse(items.pagemap[0]));
         if(!error && response.statusCode === 200){
           resolve(createShowingList(JSON.parse(body)));
+        } else{
+          reject(error);
+        }
+      });
+    }
+    else if(tvshow != null && trailer!= null){
+      request({
+        uri: "https://www.googleapis.com/customsearch/v1?",
+        qs: {
+          q: tvshow + " trailer",
+          cx: `011868887043149504159:-5-5cnusvca`,
+          siteSearch: `https://www.youtube.com/`,
+          fields: 'items',
+          key: `AIzaSyCOdpES79O2cqWNdxNaLs_6g68cNdWBsWw`,          
+        },
+        method: 'GET'
+      }, (error, response, body) => {
+        //console.log(response);
+        console.log(JSON.parse(body));
+        var items = JSON.parse(body);
+        //console.log(JSON.parse(items.pagemap[0]));
+        if(!error && response.statusCode === 200){
+          resolve(createTrailer(JSON.parse(body)));
         } else{
           reject(error);
         }

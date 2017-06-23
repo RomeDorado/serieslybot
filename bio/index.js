@@ -5,7 +5,6 @@ const createResponsePerson = require('../person');
 const config = require('../config');
 const createBiography = (bio) => {
   if(bio){
-    console.log("Umabot siya ng biography packshet yes");
     let{
       name,
       biography,
@@ -31,8 +30,6 @@ const createBiography = (bio) => {
 
 
  }
-
-   console.log(s.length + "test print");
     return{
       text: str + s,
       image: imageURL

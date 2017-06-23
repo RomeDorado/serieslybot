@@ -34,6 +34,6 @@ const createShowingList = (showList) => {
       image: null
     }
   }
-}
+}//
 
 module.exports = createShowingList;

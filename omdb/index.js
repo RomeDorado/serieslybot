@@ -60,7 +60,7 @@ const getInfo = data => {
   }
 
   return new Promise((resolve, reject) => {
-    console.log(intent + " " + tvshow + " " + person + " " + showing);
+    console.log(intent + " " + tvshow + " " + person + " " + showing + " " + trailer);
     if(tvshow != null) {
       // Fetch data from OMDB
       request({

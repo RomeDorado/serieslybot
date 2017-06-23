@@ -34,13 +34,13 @@ server.get('/', (req, res, next) => {
 
 // Handle incoming
 server.post('/', (req, res, next) => {
-	f.incoming(req, res, msg => {
-		console.log(JSON.parse(msg));
+	f.incoming(req, res, msg => {		
 		const {
 			sender,
 			postback,
 			message
 		} = msg;
+		console.log(JSON.parse(msg));
 
 		if(message.text) {
 			// Process the message here

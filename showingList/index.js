@@ -6,7 +6,6 @@ const config = require('../config');
 const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist");
-
     
 /*
     let{      
@@ -18,8 +17,8 @@ const createShowingList = (showList) => {
             }
         }]
     } = showList;
-*/
 
+*/
 let listItem = [];
 showList.forEach((item) => {
     if(item && item.pagemap && item.pagemap.listitem){

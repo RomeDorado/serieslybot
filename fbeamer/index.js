@@ -157,16 +157,22 @@ class FBeamer {
 			.catch(error => console.log(error) + "This is the error");
 	}
 
-card(id, messagedata) {
+card(id, elements) {
 
 	let obj = {
 			recipient: {
 				id
 			},
 			message: {
-				messagedata
+				attachment: {
+				type: "open_graph",
+				payload: {
+					template_type: "generic",
+					elements: elements
+				}
 			}
 		}
+	}
 			this.callSendAPI(obj)
 			.catch(error => console.log(error) + "This is the error");
 			

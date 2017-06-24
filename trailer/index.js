@@ -13,24 +13,19 @@ const createTrailer = (trailer) => {
         }]
     } = trailer;
 
-    var msgdata = {
-        attachment: {
-            type: "template",
-            payload: {
-              template_type: "open_graph",
-              elements:[{
-                url: link
-              }]
-            }
-          }
-        }
+    let elements = [];
+    let element = {			
+			"url": link
+		};
+		elements.push(element);
+
       
-    console.log(JSON.stringify(msgdata));
+    //console.log(JSON.stringify(msgdata));
 
    // let str = `${title} \n ${link}`.substring(0,320);
 
     return{
-      jsonfile: msgdata,
+      jsonfile: elements,
     }
   }
   else{

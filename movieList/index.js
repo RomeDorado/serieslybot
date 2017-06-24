@@ -15,16 +15,7 @@ const createMovieList = (movieList) => {
     var imageURL = "http://image.tmdb.org/t/p/w185" + poster_path;
 
     let str = `Try watching these movies: `
-    var res = parentArray.find(function (item) {
-      return item.name === 'results';
-    });
-
-    if(res){
-      var movieTitles = res.titles.map((title) => title.name);
-    }
-
-    console.log(movieTitles);
-    str += movieTitles;
+    console.log('ITO AND MOVIELIST:' + movieList);
 
     return{
       text: str,

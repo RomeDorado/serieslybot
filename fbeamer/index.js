@@ -165,17 +165,24 @@ card(id, messagedata) {
 			}
 	}
 			
-	request({
-			uri: 'https://graph.facebook.com/v2.6/me/messages',
-			qs: {
-				access_token: this.PAGE_ACCESS_TOKEN
-			},
-			method: 'POST',
-			json: messagedata
-		}, (error, response) => {
-			if(error) {
-				console.log(error);
-			}
+	return new Promise((resolve, reject) => {
+			// Create an HTTP POST request
+			request({
+				uri: 'https://graph.facebook.com/v2.6/me/messages',
+				qs: {
+					access_token: this.PAGE_ACCESS_TOKEN
+				},
+				method: 'POST',
+				json: messagedata
+			}, (error, response, body) => {
+				if(!error && response.statusCode === 200) {
+					resolve({
+						messageId: body.message_id
+					});
+				} else {
+					reject(error);
+				}
+			});
 		});
 }
 

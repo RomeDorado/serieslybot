@@ -10,7 +10,6 @@ const createBiography = (bio) => {
       biography,
       profile_path
     } = bio;
-
     var s ='';
     var imageURL = "http://image.tmdb.org/t/p/w185" + profile_path;
     //console.log(biography.length + "this is the length of chars");

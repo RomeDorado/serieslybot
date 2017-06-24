@@ -14,7 +14,13 @@ const createShowingList = (showList) => {
           pagemap: {
             listitem: [{
             name            
-              }]
+              },{
+              name1
+             },{
+               name2
+             }
+              
+              ]
             }
         }]
     } = showList;
@@ -39,7 +45,7 @@ const createShowingList = (showList) => {
     //console.log(listitem.name);
 
     var str = '';
-    str += name;
+    str += name1;
     //}
     return{
       text: str,

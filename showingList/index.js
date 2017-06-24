@@ -19,11 +19,24 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-     for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
+let listItem = [];
+showList.forEach((item) => {
+    if(item && item.pagemap && item.pagemap.listitem){
+       item.pagemap.listitem.forEach((lItem) => {
+           if(lItem && lItem.name){
+              listItem.push(lItem.name)
+           }
+       })
+    }
+})
+console.log(listItem);
+     
+/*
+
+for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
       var movieTitle = showList.items.pagemap.listitem[i].name;
       str += movieTitle + '\n';
     }
-/*
      var cont = listitem.map(function(obj) { 
 				var contextObj = {};
 				if(obj.name === name){

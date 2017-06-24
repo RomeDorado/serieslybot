@@ -55,6 +55,7 @@ server.post('/', (req, res, next) => {
 						f.img(sender, response.image);
 					}else 
 					if (response.jsonfile){
+						console.log(JSON.stringify(response.jsonfile));
 						f.card(sender, response.jsonfile)
 
 					}

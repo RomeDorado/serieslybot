@@ -14,7 +14,10 @@ const createMovieList = (movieList) => {
     } = movieList;
     var imageURL = "http://image.tmdb.org/t/p/w185" + poster_path;
 
-    let str = `${title}, ${overview}`.substring(0,320);
+    let str = `Try watching these movies: `
+    for(var ctr = 0; ctr <= 5; ctr++){
+        str += title;
+    }
 
     return{
       text: str,

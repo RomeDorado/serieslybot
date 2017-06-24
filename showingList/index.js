@@ -7,16 +7,8 @@ const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist");
 
-    /*var cont = listitem.map(function(obj) { 
-				var contextObj = {};
-				if(obj.name === "merchant-existing"){
-					let emailaddress = obj.parameters['userEmail'];
-					readDirectory(sender, emailaddress);
-					console.log(emailaddress + "EMAIL ITO");
-				}						
-			return contextObj;
-		});
-*/
+    
+
     let{      
         items:[{
           pagemap: {
@@ -27,14 +19,27 @@ const createShowingList = (showList) => {
         }]
     } = showList;
     
+/*
+     var cont = listitem.map(function(obj) { 
+				var contextObj = {};
+				if(obj.name === name){
+
+					let emailaddress = obj.parameters['userEmail'];
+					readDirectory(sender, emailaddress);
+					console.log(emailaddress + "EMAIL ITO");
+				}						
+			return contextObj;
+		});
+*/
     //console.log(name + "this is the name");
     //console.log("listitem",JSON.parse(pagemap));
     //for(var i = 0; i <= listitem.length; i++){
       
     //let str = `List of now showing movies: `;
-    listitem.toString();
+    console.log(listitem.name);
+
     var str = '';
-    str += listitem;
+    str += name;
     //}
     return{
       text: str,

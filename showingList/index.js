@@ -19,11 +19,10 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-     var movienames = pagemap.listitem.map(function (movie) {
-       return movie.name;
-    });
-    
-    console.log(movienames);
+     for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
+      var movieTitle = showList.items.pagemap.listitem[i].name;
+      str += movieTitle + '\n';
+    }
 /*
      var cont = listitem.map(function(obj) { 
 				var contextObj = {};

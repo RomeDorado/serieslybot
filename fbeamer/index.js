@@ -114,7 +114,7 @@ class FBeamer {
 						messageId: body.message_id
 					});
 				} else {
-					reject(error);
+					reject(error + "send message error");
 				}
 			});
 		});

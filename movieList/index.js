@@ -16,7 +16,8 @@ const createMovieList = (movieList) => {
 
     let str = `Try watching these movies: `
     for(var i= 0; i < movieList.results.length; i++){
-      console.log(movieList.results[i].title);
+      var movieTitle = movieList.results[i].title;
+      str += movieTitle;
     }
 
     return{

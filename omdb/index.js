@@ -164,7 +164,7 @@ const getInfo = data => {
           reject(error);
         }
       });
-    }
+    }//
 
 //dito lalagay else if
 

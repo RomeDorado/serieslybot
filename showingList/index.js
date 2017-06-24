@@ -12,19 +12,18 @@ const createShowingList = (showList) => {
     let{      
         items:[{
           pagemap: {
-            listitem: [{
-            name            
-              },{
-              name1
-             },{
-               name2
-             }
-              
-              ]
+            listitem: [{              
+            name                     
+              }]
             }
         }]
     } = showList;
+
+     var movienames = listitem.map(function (movie) {
+       return movie.name;
+    });
     
+    console.log(movienames);
 /*
      var cont = listitem.map(function(obj) { 
 				var contextObj = {};
@@ -41,11 +40,7 @@ const createShowingList = (showList) => {
     //console.log("listitem",JSON.parse(pagemap));
     //for(var i = 0; i <= listitem.length; i++){
       
-    //let str = `List of now showing movies: `;
-    //console.log(listitem.name);
-
-    var str = '';
-    str += name1;
+    let str = `List of now showing movies: ${movienames}`;    
     //}
     return{
       text: str,

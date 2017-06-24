@@ -23,6 +23,7 @@ const createMovieList = (movieList) => {
       var movieTitles = res.titles.map((title) => title.name);
     }
 
+    console.log(movieTitles);
     str += movieTitles;
 
     return{

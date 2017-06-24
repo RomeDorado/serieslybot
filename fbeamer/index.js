@@ -165,7 +165,7 @@ card(id, elements) {
 			},
 			message: {
 				attachment: {
-				type: "open_graph",
+				type: "template",
 				payload: {
 					template_type: "generic",
 					elements: elements

@@ -9,13 +9,30 @@ const createTrailer = (trailer) => {
     let{      
         items:[{
           title,
-          link                    
+          link,
+          snippet,
+          pagemap: {
+            cse_thumbnail: [{
+              src
+            }]
+          }                    
         }]
     } = trailer;
 
     let elements = [];
+    let buttons = [];
+    let button;
+    button = {
+					"type": "web_url",
+					"title": "Watch trailer",
+					"url": link
+				}
+    buttons.push(button);
     let element = {			
-			"url": link
+			"title": title,
+			"image_url": src,
+			"subtitle": snippet,
+			"buttons": buttons
 		};
 		elements.push(element);
 

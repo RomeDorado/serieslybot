@@ -9,15 +9,33 @@ const createTrailer = (trailer) => {
     let{      
         items:[{
           title,
-          link
+          link,
+          pagemap: {
+            cse_thumbnail: [{
+              src
+            }]
+          }
         }]
     } = trailer;
+
+    var msgdata = {
+        attachment: {
+            type: template,
+            payload: {
+              template_type:open_graph,
+              elements:[{
+                url: src
+              }]
+            }
+          }
+        }
+      
     
 
-    let str = `${title} \n ${link}`.substring(0,320);
+   // let str = `${title} \n ${link}`.substring(0,320);
 
     return{
-      text: str,
+      text: msgdata,
     }
   }
   else{

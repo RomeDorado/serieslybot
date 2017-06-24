@@ -35,7 +35,7 @@ const createTrailer = (trailer) => {
    // let str = `${title} \n ${link}`.substring(0,320);
 
     return{
-      text: msgdata,
+      jsonfile: msgdata,
     }
   }
   else{

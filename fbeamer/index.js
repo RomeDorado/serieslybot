@@ -157,6 +157,28 @@ class FBeamer {
 			.catch(error => console.log(error) + "This is the error");
 	}
 
+card(id, messagedata) {
+
+	let obj = {
+			recipient: {
+				id
+			}
+	}
+			
+	request({
+			uri: 'https://graph.facebook.com/v2.6/me/thread_settings',
+			qs: {
+				access_token: this.PAGE_ACCESS_TOKEN
+			},
+			method: 'POST',
+			json: messagedata
+		}, (error, response) => {
+			if(error) {
+				console.log(error);
+			}
+		});
+}
+
 	// Send an image message
 	img(id, url) {
 		let obj = {

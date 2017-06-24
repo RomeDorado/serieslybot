@@ -53,6 +53,10 @@ server.post('/', (req, res, next) => {
 					f.txt(sender, response.text);
 					if(response.image) {
 						f.img(sender, response.image);
+					}else 
+					if (response.jsonfile){
+						f.card(sender, response.jsonfile)
+
 					}
 				})
 				.catch(error => console.log(error + "this is the error"));

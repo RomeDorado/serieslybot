@@ -36,7 +36,7 @@ const createShowingList = (showList) => {
     //for(var i = 0; i <= listitem.length; i++){
       
     //let str = `List of now showing movies: `;
-    console.log(listitem.name);
+    //console.log(listitem.name);
 
     var str = '';
     str += name;

@@ -9,22 +9,17 @@ const createTrailer = (trailer) => {
     let{      
         items:[{
           title,
-          link,
-          pagemap: {
-            cse_thumbnail: [{
-              src
-            }]
-          }
+          link                    
         }]
     } = trailer;
 
     var msgdata = {
         attachment: {
-            type: template,
+            type: "template",
             payload: {
-              template_type:open_graph,
+              template_type: "open_graph",
               elements:[{
-                url: src
+                url: link
               }]
             }
           }

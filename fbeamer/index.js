@@ -176,7 +176,7 @@ card(id, messagedata) {
 	request({
 		uri: 'https://graph.facebook.com/v2.6/me/messages',
 		qs: {
-			access_token: config.FB_PAGE_TOKEN
+			access_token: this.PAGE_ACCESS_TOKEN
 		},
 		method: 'POST',
 		json: messageData

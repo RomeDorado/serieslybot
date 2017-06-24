@@ -15,7 +15,7 @@ const createMovieList = (movieList) => {
     var imageURL = "http://image.tmdb.org/t/p/w185" + poster_path;
 
     let str = `Try watching these movies: `
-    for(var ctr = 0; ctr <= 5; ctr++){
+    for(var ctr = 0; results.length <= 5; ctr++){
         str += title;
     }
 

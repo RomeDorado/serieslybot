@@ -30,7 +30,7 @@ const createTrailer = (trailer) => {
           }
         }
       
-    
+    console.log(JSON.stringify(msgdata));
 
    // let str = `${title} \n ${link}`.substring(0,320);
 

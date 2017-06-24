@@ -166,7 +166,7 @@ card(id, messagedata) {
 	}
 			
 	request({
-			uri: 'https://graph.facebook.com/v2.6/me/thread_settings',
+			uri: 'https://graph.facebook.com/v2.6/me/messages',
 			qs: {
 				access_token: this.PAGE_ACCESS_TOKEN
 			},

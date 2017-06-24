@@ -19,7 +19,7 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-     var movienames = listitem.map(function (movie) {
+     var movienames = pagemap.listitem.map(function (movie) {
        return movie.name;
     });
     

@@ -121,7 +121,7 @@ const getInfo = data => {
           resolve(createResponsePerson(intent, JSON.parse(body)));
         } else{          
           console.log("nareject");
-          reject(error);          
+          reject("error");          
         }
       });
     }

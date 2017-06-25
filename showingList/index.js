@@ -20,7 +20,7 @@ const createShowingList = (showList) => {
 
 */
 for(var i= 0; i < showList.items.pagemap[0].listitem.length; i++){
-      var movieTitle = showList.items.pagemap.listitem[i].name;
+      var movieTitle = showList.items.pagemap[0].listitem[i].name;
       str += movieTitle + '\n';
     }
     console.log(str);

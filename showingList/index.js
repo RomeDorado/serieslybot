@@ -58,8 +58,9 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
     //console.log("listitem",JSON.parse(pagemap));
     //for(var i = 0; i <= listitem.length; i++){
       
-    let str = `List of now showing movies: ${listItem.toString()}`;    
+
     //}
+        //let str = `List of now showing movies: ${listItem.toString()}`;    
     return{
       text: str,
     }

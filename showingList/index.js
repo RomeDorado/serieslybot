@@ -18,7 +18,7 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-//console.log(JSON.stringify(listitem));
+
      
 /*
 
@@ -47,7 +47,9 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
     return{
       text: str,
     }
+    
   }
+  
   else{
     return{
       text: "I'm sorry, there must be an error. Please try again.",
@@ -55,5 +57,6 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
     }
   }
 }//
+console.log(JSON.stringify(listitem));
 
 module.exports = createShowingList;

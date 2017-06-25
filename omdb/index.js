@@ -174,7 +174,7 @@ const getInfo = data => {
 
 
     else {
-      reject("Entities not found!");
+      reject("I can't seem to understand you");
     }
   });
 }

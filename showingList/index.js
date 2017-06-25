@@ -7,7 +7,7 @@ const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist");
     
-
+/*
     let{      
         items:[{
           pagemap: {
@@ -19,8 +19,18 @@ const createShowingList = (showList) => {
     } = showList;
 
 
+*/
+const results = {
+  
+  items:[{
+          pagemap: {
+            listitem: [{              
+            name                     
+              }]
+            }
+        }]
 
-const results = {showList};
+} = showList;
 function nameOnly(listItem) {
     return listItem.name;
 }

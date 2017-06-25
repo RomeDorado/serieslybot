@@ -19,6 +19,7 @@ const createShowingList = (showList) => {
     } = showList;
 
 */
+var str ='';
 for(var i= 0; i < showList.items.pagemap[0].listitem.length; i++){
       var movieTitle = showList.items.pagemap[0].listitem[i].name;
       str += movieTitle + '\n';

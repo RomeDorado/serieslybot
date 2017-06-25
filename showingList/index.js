@@ -28,7 +28,7 @@ function resultItemsReducer(memo, item) {
     return memo.concat(item.pagemap.listitem.map(nameOnly));
 }
 const names = results.items.reduce(resultItemsReducer, []);
-console.log(names);
+console.log(names + "names");
 
      
 /*

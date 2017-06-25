@@ -72,6 +72,13 @@ const createResponse = (intent, tvshow) => {
       //   }
       // }
     }
+  }else{
+    let str = `I'm still learning, please re-type if you have a typo`;
+          return{
+            text: str,
+            image: null
+          }
+
   }
 }
 /*

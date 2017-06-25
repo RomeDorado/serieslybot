@@ -4,7 +4,7 @@ const request = require('request');
 const createBiography = require('../bio');
 const createResponsePerson = (intent, person) => {
   return new Promise((resolve, reject) => {
-    if(person.results != undefined){
+    if(person.total_results > 0){
       let {
         results: [{
         id

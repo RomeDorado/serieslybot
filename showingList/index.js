@@ -18,19 +18,14 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-
 */
-const results = {
-  
-  items:[{
-          pagemap: {
-            listitem: [{              
-            name                     
-              }]
-            }
-        }]
+for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
+      var movieTitle = showList.items.pagemap.listitem[i].name;
+      str += movieTitle + '\n';
+    }
+    console.log(str);
 
-} = showList;
+const results = {showList};
 function nameOnly(listItem) {
     return listItem.name;
 }

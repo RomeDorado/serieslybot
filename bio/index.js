@@ -4,7 +4,7 @@ const createResponse = require('../utils');
 const createResponsePerson = require('../person');
 const config = require('../config');
 const createBiography = (bio) => {
-  if(bio){
+  if(bio.total_results != 0){
     let{
       name,
       biography,

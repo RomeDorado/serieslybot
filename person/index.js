@@ -4,6 +4,7 @@ const request = require('request');
 const createBiography = require('../bio');
 const createResponsePerson = (intent, person) => {
   return new Promise((resolve, reject) => {
+    console.log(JSON.parse(person));
     if(person){
       let {
         results: [{

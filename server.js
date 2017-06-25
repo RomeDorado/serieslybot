@@ -60,7 +60,7 @@ server.post('/', (req, res, next) => {
 
 					}
 				})
-				.catch(error => f.text(error));
+				.catch(error => f.txt(error));
 				
 				//console.log(error + "this is the error at server.js"));
 		}

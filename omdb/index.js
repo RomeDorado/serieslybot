@@ -61,7 +61,7 @@ const getInfo = data => {
 
   return new Promise((resolve, reject) => {
     console.log(intent + " " + tvshow + " " + person + " " + showing + " " + trailer);
-    if(intent == 'tvInfo' && tvshow != null) {
+    if(tvshow != null) {
       // Fetch data from OMDB
       request({
         uri: "https://www.omdbapi.com",

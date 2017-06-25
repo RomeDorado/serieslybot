@@ -26,11 +26,11 @@ const createResponsePerson = (intent, person) => {
       });
 
     } else {    
-      createBiography("!bio");
-     // return {
-       // text: `I can't seem to find the person you are looking for. Please try again.`,
-        //image: null
-     // }
+      
+      return {
+      text: `I can't seem to find the person you are looking for. Please try again.`,
+     image: null
+      }
     }
   });
 }

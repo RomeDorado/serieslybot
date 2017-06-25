@@ -4,7 +4,15 @@ const createResponse = require('../utils');
 const createResponsePerson = require('../person');
 const config = require('../config');
 const createBiography = (bio) => {
-  if(bio.total_results != 0){
+  if(bio.total_results == 0){
+
+    return{
+      text: "I can't seem to find the person you are looking for. Please try again.",
+      image: null
+    }
+  }   
+
+  else if(bio.total_results != 0){
     let{
       name,
       biography,
@@ -34,12 +42,7 @@ const createBiography = (bio) => {
       image: imageURL
    }
   }
-  else{
-    return{
-      text: "I can't seem to find the person you are looking for. Please try again.",
-      image: null
-    }
-  }
+  
 }
 
 module.exports = createBiography;

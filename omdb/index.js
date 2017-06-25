@@ -18,44 +18,44 @@ const getInfo = data => {
 
   //Get the Genre ID
   switch(genre){
-      case "Action":
-      genreID = 28;
+      case "action":
+      genreID = "28";
       break;
 
       case "Adventure":
-      genreID = 12;
+      genreID = "12";
       break;
 
       case "Animation":
-      genreID = 16;
+      genreID = "16";
       break;
 
       case "Comedy":
-      genreID = 35;
+      genreID = "35";
       break;
 
       case "Drama":
-      genreID = 18;
+      genreID = "18";
       break;
 
       case "Horror":
-      genreID = 27;
+      genreID = "27";
       break;
 
       case "Fantasy":
-      genreID = 14;
+      genreID = "14";
       break;
 
       case "Music":
-      genreID = 10402;
+      genreID = "10402";
       break;
 
       case "Romance":
-      genreID = 10749;
+      genreID = "10749";
       break;
 
       case "Science Fiction":
-      genreID = 878;
+      genreID = "878";
       break;
   }
 

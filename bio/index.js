@@ -4,10 +4,12 @@ const createResponse = require('../utils');
 const createResponsePerson = require('../person');
 const config = require('../config');
 const createBiography = (bio) => {
-  if(bio.total_results == 0){
+  if(bio.total_results == 0){ 
+
+    let str = `I can't seem to find the person you are looking for. Please try again.`;
 
     return{
-      text: "I can't seem to find the person you are looking for. Please try again.",
+      text: str,
       image: null
     }
   }   

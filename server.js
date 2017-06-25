@@ -60,7 +60,7 @@ server.post('/', (req, res, next) => {
 
 					}
 				})
-				.catch(error => console.log(error + "this is the error"));
+				.catch(error => console.log(error + "this is the error at server.js"));
 		}
 		console.log(postback + "This is postback");
 		})

@@ -43,7 +43,9 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
       
 
     //}
-  let str = `List of now showing movies: ${name}`;    
+  
+  let str = `List of now showing movies: ${name}`;  
+  console.log(JSON.stringify(listitem)); 
     return{
       text: str,
     }
@@ -56,7 +58,8 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
       image: null
     }
   }
+  
 }//
-console.log(JSON.stringify(listitem));
+
 
 module.exports = createShowingList;

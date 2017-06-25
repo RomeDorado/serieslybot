@@ -21,6 +21,7 @@ const createResponsePerson = (intent, person) => {
         if(!error && response.statusCode === 200){
           resolve(createBiography(JSON.parse(body)));
         } else{
+          console.log("rejected at person");
           reject(error);
         }
       });

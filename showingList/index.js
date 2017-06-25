@@ -20,7 +20,7 @@ const createShowingList = (showList) => {
 
 */
 
-const results = {showList};
+const results = {pagemap};
 function nameOnly(listItem) {
     return listItem.name;
 }

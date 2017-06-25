@@ -26,6 +26,7 @@ const createResponsePerson = (intent, person) => {
       });
 
     } else {
+    console.log("umabot dito sa else");
       return {
         text: "I don't seem to understand your question!",
         image: null

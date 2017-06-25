@@ -45,7 +45,7 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
     //}
   
   let str = `List of now showing movies: ${name}`;  
-  console.log(JSON.stringify(listitem)); 
+  console.log(listitem); 
     return{
       text: str,
     }

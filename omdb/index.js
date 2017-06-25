@@ -126,25 +126,25 @@ const getInfo = data => {
         }
       });
     }
-    // else if(year != null){
-    //   request({
-    //     uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",
-    //     qs: {
-    //       language: "en-US",
-    //       sort_by: "popularity.desc",
-    //       page: '1',
-    //       primary_release_year: year
-    //     },
-    //     method: 'GET'
-    //   }, (error, response, body) => {
-    //     console.log(JSON.parse(body));
-    //     if(!error && response.statusCode === 200){
-    //       resolve(createMovieList(JSON.parse(body)));
-    //     } else{
-    //       reject(error);
-    //     }
-    //   });
-    // }
+    else if(year != null){
+      request({
+        uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",
+        qs: {
+          language: "en-US",
+          sort_by: "popularity.desc",
+          page: '1',
+          primary_release_year: year
+        },
+        method: 'GET'
+      }, (error, response, body) => {
+        console.log(JSON.parse(body));
+        if(!error && response.statusCode === 200){
+          resolve(createMovieList(JSON.parse(body)));
+        } else{
+          reject(error);
+        }
+      });
+    }
     else if(genre != null){
       request({
         uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",

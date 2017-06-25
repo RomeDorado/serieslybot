@@ -3,14 +3,15 @@ const config = require('../config');
 const request = require('request');
 const createBiography = require('../bio');
 const createResponsePerson = (intent, person) => {
-  return new Promise((resolve, reject) => {    
+  return new Promise((resolve, reject) => {
+    
     if(person){
       let {
         results: [{
         id
         }]
       } = person;
-console.log(JSON.parse(person));
+
       request({
         uri: "https://api.themoviedb.org/3/person/"+id,
         qs: {

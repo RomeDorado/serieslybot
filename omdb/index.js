@@ -119,8 +119,11 @@ const getInfo = data => {
         var per = JSON.parse(body);
         if(!error && response.statusCode === 200 && per.total_results != 0){
           resolve(createResponsePerson(intent, JSON.parse(body)));
-        } else{
+        } else{          
           reject(error);
+          return{
+           text: "I can't seem to find the person you are looking for. Please try again." 
+          }
         }
       });
     }

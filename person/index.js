@@ -25,10 +25,9 @@ const createResponsePerson = (intent, person) => {
         }
       });
 
-    } else {
-    console.log("umabot dito sa else");
+    } else {    
       return {
-        text: "I don't seem to understand your question!",
+        text: `I can't seem to find the person you are looking for. Please try again.`,
         image: null
       }
     }

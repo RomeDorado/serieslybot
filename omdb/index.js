@@ -120,6 +120,7 @@ const getInfo = data => {
         if(!error && response.statusCode === 200 && per.total_results != 0){
           resolve(createResponsePerson(intent, JSON.parse(body)));
         } else{          
+          console.log("nareject");
           reject(error);          
         }
       });

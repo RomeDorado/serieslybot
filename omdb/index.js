@@ -60,7 +60,8 @@ const getInfo = data => {
   }
 
   return new Promise((resolve, reject) => {
-    console.log(intent + " " + tvshow + " " + person + " " + showing + " " + trailer);
+    // console.log(intent + " " + tvshow + " " + person + " " + showing + " " + trailer);
+    console.log(genre + " " + genreID);
     if(intent == 'trailerInfo'){
       request({
         uri: "https://www.googleapis.com/customsearch/v1?",

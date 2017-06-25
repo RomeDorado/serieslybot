@@ -116,7 +116,8 @@ const getInfo = data => {
         method: 'GET'
       }, (error, response, body) => {
         console.log(JSON.parse(body));
-        if(!error && response.statusCode === 200){
+        var per = JSON.parse(body);
+        if(!error && response.statusCode === 200 && per.total_results != 0){
           resolve(createResponsePerson(intent, JSON.parse(body)));
         } else{
           reject(error);

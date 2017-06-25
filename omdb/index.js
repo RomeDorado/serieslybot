@@ -22,39 +22,39 @@ const getInfo = data => {
       genreID = "28";
       break;
 
-      case "Adventure":
+      case "adventure":
       genreID = "12";
       break;
 
-      case "Animation":
+      case "animation":
       genreID = "16";
       break;
 
-      case "Comedy":
+      case "comedy":
       genreID = "35";
       break;
 
-      case "Drama":
+      case "drama":
       genreID = "18";
       break;
 
-      case "Horror":
+      case "horror":
       genreID = "27";
       break;
 
-      case "Fantasy":
+      case "fantasy":
       genreID = "14";
       break;
 
-      case "Music":
+      case "music":
       genreID = "10402";
       break;
 
-      case "Romance":
+      case "romance":
       genreID = "10749";
       break;
 
-      case "Science Fiction":
+      case "science fiction":
       genreID = "878";
       break;
   }

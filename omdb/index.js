@@ -61,7 +61,31 @@ const getInfo = data => {
 
   return new Promise((resolve, reject) => {
     console.log(intent + " " + tvshow + " " + person + " " + showing + " " + trailer);
-    if(tvshow != null && trailer == null) {
+    if(intent == 'trailerInfo'){
+      request({
+        uri: "https://www.googleapis.com/customsearch/v1?",
+        qs: {
+          q: tvshow + " trailer",
+          cx: `011868887043149504159:-5-5cnusvca`,
+          siteSearch: `https://www.youtube.com/`,
+          fields: 'items',
+          key: `AIzaSyCOdpES79O2cqWNdxNaLs_6g68cNdWBsWw`,          
+        },
+        method: 'GET'
+      }, (error, response, body) => {
+        //console.log(response);
+        //console.log(JSON.parse(body));
+        var items = JSON.parse(body);
+        //console.log(JSON.parse(items.pagemap[0]));
+        if(!error && response.statusCode === 200){
+          resolve(createTrailer(items));
+        } else{
+          reject(error);
+        }
+      });
+    }//
+
+   else if(tvshow != null) {
       // Fetch data from OMDB
       request({
         uri: "https://www.omdbapi.com",
@@ -142,29 +166,7 @@ const getInfo = data => {
         }
       });
     }
-    else if(intent == 'trailerInfo'){
-      request({
-        uri: "https://www.googleapis.com/customsearch/v1?",
-        qs: {
-          q: tvshow + " trailer",
-          cx: `011868887043149504159:-5-5cnusvca`,
-          siteSearch: `https://www.youtube.com/`,
-          fields: 'items',
-          key: `AIzaSyCOdpES79O2cqWNdxNaLs_6g68cNdWBsWw`,          
-        },
-        method: 'GET'
-      }, (error, response, body) => {
-        //console.log(response);
-        //console.log(JSON.parse(body));
-        var items = JSON.parse(body);
-        //console.log(JSON.parse(items.pagemap[0]));
-        if(!error && response.statusCode === 200){
-          resolve(createTrailer(items));
-        } else{
-          reject(error);
-        }
-      });
-    }//
+    
 
 //dito lalagay else if
 

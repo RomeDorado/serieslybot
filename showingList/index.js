@@ -18,7 +18,7 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-console.log(JSON.stringify(listitem));
+//console.log(JSON.stringify(listitem));
      
 /*
 

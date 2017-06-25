@@ -7,7 +7,7 @@ const createShowingList = (showList) => {
   if(showList){
     console.log("Umabot ng showinglist");
     
-/*
+
     let{      
         items:[{
           pagemap: {
@@ -18,24 +18,7 @@ const createShowingList = (showList) => {
         }]
     } = showList;
 
-*/
-var str ='';
-for(var i= 0; i < showList.items.pagemap[0].listitem.length; i++){
-      var movieTitle = showList.items.pagemap[0].listitem[i].name;
-      str += movieTitle + '\n';
-    }
-    console.log(str);
-
-const results = {showList};
-function nameOnly(listItem) {
-    return listItem.name;
-}
-function resultItemsReducer(memo, item) {
-    return memo.concat(item.pagemap.listitem.map(nameOnly));
-}
-const names = results.items.reduce(resultItemsReducer, []);
-console.log(names + "names");
-
+console.log(JSON.stringify(listitem));
      
 /*
 
@@ -60,7 +43,7 @@ for(var i= 0; i < showList.items.pagemap.listitem.length; i++){
       
 
     //}
-        //let str = `List of now showing movies: ${listItem.toString()}`;    
+  let str = `List of now showing movies: ${name}`;    
     return{
       text: str,
     }

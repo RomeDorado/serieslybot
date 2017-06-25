@@ -19,16 +19,16 @@ const createShowingList = (showList) => {
     } = showList;
 
 */
-let listItem = [];
-showList.forEach((item) => {
-    if(item && item.pagemap && item.pagemap.listitem){
-       item.pagemap.listitem.forEach((lItem) => {
-           if(lItem && lItem.name){
-              listItem.push(lItem.name)
-           }
-       })
-    }
-})
+
+const results = {showList};
+function nameOnly(listItem) {
+    return listItem.name;
+}
+function resultItemsReducer(memo, item) {
+    return memo.concat(item.pagemap.listitem.map(nameOnly));
+}
+const names = results.items.reduce(resultItemsReducer, []);
+console.log(names);
 
      
 /*

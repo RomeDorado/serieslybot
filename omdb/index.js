@@ -128,6 +128,7 @@ const getInfo = data => {
     }
     else if(intent == 'movieList'){
       if(year != null && genre != null){
+        console.log("pumasok sa year and genre");
         request({
           uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",
           qs: {
@@ -148,6 +149,7 @@ const getInfo = data => {
         });
       }
       else if(year != null){
+        console.log("pumasok sa year lang");
         request({
           uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",
           qs: {
@@ -167,6 +169,7 @@ const getInfo = data => {
         });
       }
       else if(genre != null){
+        console.log("pumasok sa genre lang");
         request({
           uri: "https://api.themoviedb.org/3/discover/movie?api_key=92b2df3080b91d92b31eacb015fc5497",
           qs: {
